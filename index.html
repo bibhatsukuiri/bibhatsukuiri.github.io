@@ -1,39 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive eLearning</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML Reel Player</title>
+<style>
+:root{--bg:#080b12;--panel:#111827;--line:rgba(255,255,255,.14);--muted:#9ca3af;--text:#f9fafb;--accent:#7c3aed;--accent2:#22d3ee;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(circle at top left,rgba(124,58,237,.25),transparent 28rem),radial-gradient(circle at bottom right,rgba(34,211,238,.2),transparent 30rem),var(--bg);color:var(--text)}button,input{font:inherit}button{border:0;border-radius:999px;padding:.85rem 1rem;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;font-weight:800;cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.wrap{width:min(1250px,100%);margin:auto;min-height:100vh;display:grid;grid-template-columns:360px 1fr;gap:1.5rem;padding:1.5rem}.card{background:rgba(17,24,39,.82);border:1px solid var(--line);border-radius:24px;padding:1.25rem;box-shadow:0 24px 70px rgba(0,0,0,.28)}.left{display:flex;flex-direction:column;gap:1rem;align-self:start}.eyebrow{color:var(--accent2);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:.75rem;margin:0 0 .4rem}h1,h2,p{margin-top:0}.muted{color:var(--muted);line-height:1.55}.drop{border:1.5px dashed rgba(255,255,255,.25);border-radius:20px;min-height:160px;display:grid;place-items:center;text-align:center;background:rgba(255,255,255,.055);cursor:pointer}.drop.drag{border-color:var(--accent2);background:rgba(34,211,238,.12)}#file{display:none}.small{font-size:.86rem;color:var(--muted)}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.65rem}.ghost{background:rgba(255,255,255,.08);border:1px solid var(--line)}.preview{display:grid;grid-template-columns:minmax(300px,390px) 1fr;gap:1.5rem;align-items:center}.phone{aspect-ratio:9/16;border-radius:42px;padding:13px;background:linear-gradient(145deg,#1f2937,#020617);box-shadow:0 34px 90px rgba(0,0,0,.42)}#stage{position:relative;overflow:hidden;width:100%;height:100%;border-radius:32px;background:linear-gradient(135deg,#111827,#312e81);display:grid;place-items:center;isolation:isolate}#stage:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.1),transparent 30%,rgba(0,0,0,.6));z-index:1}.empty{text-align:center;z-index:2;padding:1.5rem}.sceneContent{position:absolute;z-index:3;left:0;right:0;bottom:0;padding:1.2rem;display:grid;gap:.65rem;animation:rise .45s ease both}.sceneContent.center{top:0;bottom:0;align-content:center;text-align:center}.sceneContent.top{top:0;bottom:auto}.kicker{width:max-content;max-width:100%;padding:.35rem .7rem;border-radius:999px;background:rgba(255,255,255,.16);font-weight:900;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}.center .kicker{margin:auto}.title{font-size:clamp(2rem,7vw,3.5rem);line-height:.92;letter-spacing:-.07em;margin:0}.caption{font-size:1.05rem;color:rgba(255,255,255,.88);line-height:1.35}.bullets{list-style:none;padding:0;margin:.2rem 0 0;display:grid;gap:.45rem}.bullets li{padding:.55rem .75rem;border-radius:14px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.1)}.media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.media.contain{inset:8%;width:84%;height:44%;object-fit:contain;border-radius:20px;background:rgba(0,0,0,.25);z-index:2}.bar{height:12px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;border:1px solid var(--line)}#fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2))}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin:1rem 0}.scenes{display:grid;gap:.55rem;max-height:330px;overflow:auto}.sceneBtn{border-radius:16px;text-align:left;background:rgba(255,255,255,.06);border:1px solid var(--line);color:#d1d5db}.sceneBtn.active{border-color:var(--accent2);background:rgba(34,211,238,.13);color:#fff}@keyframes rise{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media(max-width:950px){.wrap,.preview{grid-template-columns:1fr}.left{order:2}.preview{order:1}.phone{width:min(100%,340px);margin:auto}}@media(max-width:560px){.wrap{padding:.8rem}.card{padding:1rem;border-radius:18px}.grid2,.controls{grid-template-columns:1fr 1fr}}
+</style>
 </head>
 <body>
-
-    <h1>Welcome to Interactive eLearning</h1>
-    <p>Click the button below to view the shape dragging sample:</p>
-    <button class="button" onclick="location.href='sample/elearning/kids/shapes.html'">View Sample</button>
-
+<main class="wrap">
+<section class="left card">
+<div><p class="eyebrow">JSON to Reel</p><h1>HTML Reel Player</h1><p class="muted">Upload a JSON file and preview a vertical reel with timed scenes, captions, media, and playback controls.</p></div>
+<label class="drop" id="drop"><input id="file" type="file" accept="application/json,.json"><span><b>Choose JSON file</b><br><span class="small">or drag and drop here</span></span></label>
+<div class="grid2"><button id="sample">Load sample</button><button id="download" class="ghost">Download sample</button></div>
+<div class="card"><h2>Status</h2><p class="muted" id="status">No reel loaded yet.</p></div>
+</section>
+<section class="preview card">
+<div class="phone"><div id="stage"><div class="empty"><h2>Load a JSON reel</h2><p class="muted">Your reel preview will appear here.</p></div></div></div>
+<div>
+<p class="small" id="counter">Scene 0 / 0</p><h2 id="reelTitle">Untitled reel</h2><p class="small" id="time">00:00 / 00:00</p>
+<div class="bar"><div id="fill"></div></div>
+<div class="controls"><button id="prev" class="ghost" disabled>Prev</button><button id="play" disabled>Play</button><button id="next" class="ghost" disabled>Next</button><button id="restart" class="ghost" disabled>Restart</button></div>
+<div id="scenes" class="scenes"></div>
+</div>
+</section>
+</main>
+<script>
+const SAMPLE={title:"How a COMSOL Simulation Works",settings:{defaultDuration:5,loop:true,brandColor:"#7c3aed",accentColor:"#22d3ee"},scenes:[{kicker:"Engineering Reel",title:"Simulation in 30 Seconds",caption:"A clean JSON-powered reel format for educational videos.",duration:4,layout:"center",background:{type:"gradient",value:"linear-gradient(135deg,#020617,#312e81,#0891b2)"}},{kicker:"Step 1",title:"Create Geometry",caption:"Define the structure, boundaries, and dimensions.",duration:5,background:{type:"gradient",value:"linear-gradient(135deg,#111827,#1d4ed8)"},bullets:["2D or 3D model","Clean boundaries","Correct dimensions"]},{kicker:"Step 2",title:"Assign Materials",caption:"Material properties decide how fields behave inside the model.",duration:5,background:{type:"gradient",value:"linear-gradient(135deg,#0f172a,#166534)"},bullets:["Refractive index","Thermal conductivity","Young's modulus"]},{kicker:"Step 3",title:"Apply Physics",caption:"Choose the physics interface and boundary conditions carefully.",duration:5,background:{type:"gradient",value:"linear-gradient(135deg,#18181b,#be123c)"}},{kicker:"Final Output",title:"Plot the Result",caption:"Use graphs and field plots to explain the physics clearly.",duration:4,layout:"center",background:{type:"gradient",value:"linear-gradient(135deg,#030712,#7c3aed,#22d3ee)"}}]};
+const $=s=>document.querySelector(s),st={reel:null,i:0,playing:false,start:0,pauseAt:0,raf:null};
+const els={file:$('#file'),drop:$('#drop'),sample:$('#sample'),download:$('#download'),stage:$('#stage'),status:$('#status'),counter:$('#counter'),title:$('#reelTitle'),time:$('#time'),fill:$('#fill'),prev:$('#prev'),play:$('#play'),next:$('#next'),restart:$('#restart'),scenes:$('#scenes')};
+function esc(x){return String(x).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')}function fmt(s){s=Math.floor(s);return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}function num(v,f){v=Number(v);return Number.isFinite(v)&&v>0?v:f}
+function norm(raw){if(!raw||typeof raw!=='object')throw Error('JSON root must be an object.');if(!Array.isArray(raw.scenes)||!raw.scenes.length)throw Error('JSON must contain a non-empty scenes array.');let set={defaultDuration:num(raw.settings?.defaultDuration,5),loop:raw.settings?.loop??true,brandColor:raw.settings?.brandColor||'#7c3aed',accentColor:raw.settings?.accentColor||'#22d3ee'};return{title:raw.title||'Untitled reel',settings:set,scenes:raw.scenes.map((x,n)=>({title:String(x.title||`Scene ${n+1}`),kicker:x.kicker||'',caption:x.caption||'',duration:num(x.duration,set.defaultDuration),layout:['bottom','center','top'].includes(x.layout)?x.layout:'bottom',background:x.background||{type:'gradient',value:'linear-gradient(135deg,#111827,#312e81)'},media:x.media||null,bullets:Array.isArray(x.bullets)?x.bullets.slice(0,5).map(String):[]}))}}
+function load(raw,name='sample'){try{st.reel=norm(raw);st.i=0;st.playing=false;st.pauseAt=0;cancelAnimationFrame(st.raf);document.documentElement.style.setProperty('--accent',st.reel.settings.brandColor);document.documentElement.style.setProperty('--accent2',st.reel.settings.accentColor);render();list();enable(true);els.play.textContent='Play';els.status.textContent=`Loaded ${st.reel.scenes.length} scenes from ${name}.`;els.status.style.color='var(--muted)'}catch(e){els.status.textContent=e.message;els.status.style.color='#fb923c'}}
+function cur(){return st.reel.scenes[st.i]}function before(){return st.reel.scenes.slice(0,st.i).reduce((a,b)=>a+b.duration,0)}function total(){return st.reel.scenes.reduce((a,b)=>a+b.duration,0)}function elapsed(){return Math.max(0,(performance.now()-st.start)/1000)}
+function render(){let s=cur();st.start=performance.now();st.pauseAt=0;els.stage.innerHTML='';els.stage.style.background=s.background.value||'#111827';if(s.background.type==='image'){els.stage.style.backgroundImage=`url('${s.background.value}')`;els.stage.style.backgroundSize='cover';els.stage.style.backgroundPosition='center'}else els.stage.style.backgroundImage='';if(s.media&&s.media.src){let m=document.createElement(s.media.type==='video'?'video':'img');m.className='media '+(s.media.fit==='contain'?'contain':'');m.src=s.media.src;if(s.media.type==='video'){m.muted=true;m.loop=true;m.playsInline=true;if(st.playing)m.play().catch(()=>{})}els.stage.appendChild(m)}let c=document.createElement('div');c.className='sceneContent '+s.layout;c.innerHTML=(s.kicker?`<p class="kicker">${esc(s.kicker)}</p>`:'')+`<h2 class="title">${esc(s.title)}</h2>`+(s.caption?`<p class="caption">${esc(s.caption)}</p>`:'')+(s.bullets.length?`<ul class="bullets">${s.bullets.map(b=>`<li>${esc(b)}</li>`).join('')}</ul>`:'');els.stage.appendChild(c);meta();progress(0);active()}
+function list(){els.scenes.innerHTML='';st.reel.scenes.forEach((s,i)=>{let b=document.createElement('button');b.className='sceneBtn';b.innerHTML=`<b>${i+1}. ${esc(s.title)}</b><br><span class="small">${s.duration}s</span>`;b.onclick=()=>go(i);els.scenes.appendChild(b)});active()}
+function active(){[...els.scenes.children].forEach((b,i)=>b.classList.toggle('active',i===st.i))}function meta(){els.title.textContent=st.reel.title;els.counter.textContent=`Scene ${st.i+1} / ${st.reel.scenes.length}`;els.time.textContent=`${fmt(before())} / ${fmt(total())}`}
+function progress(x){let t=before()+Math.min(x,cur().duration);els.fill.style.width=Math.min(t/total()*100,100)+'%';els.time.textContent=`${fmt(t)} / ${fmt(total())}`;if(x>=cur().duration&&st.playing)advance()}
+function tick(){if(!st.playing)return;progress(elapsed());st.raf=requestAnimationFrame(tick)}function play(){st.playing=true;st.start=performance.now()-st.pauseAt*1000;els.play.textContent='Pause';tick();els.stage.querySelectorAll('video').forEach(v=>v.play().catch(()=>{}))}function pause(){st.playing=false;st.pauseAt=elapsed();els.play.textContent='Play';cancelAnimationFrame(st.raf);els.stage.querySelectorAll('video').forEach(v=>v.pause())}function toggle(){st.playing?pause():play()}function go(i){let p=st.playing;st.i=i;render();if(p)play()}function advance(){let last=st.i===st.reel.scenes.length-1;if(last&&!st.reel.settings.loop){pause();progress(cur().duration);return}st.i=last?0:st.i+1;render();play()}function enable(v){[els.prev,els.play,els.next,els.restart].forEach(b=>b.disabled=!v)}
+els.file.onchange=e=>{let f=e.target.files[0];if(!f)return;let r=new FileReader();r.onload=()=>{try{load(JSON.parse(r.result),f.name)}catch(err){els.status.textContent='Invalid JSON: '+err.message;els.status.style.color='#fb923c'}};r.readAsText(f)};['dragenter','dragover'].forEach(e=>els.drop.addEventListener(e,x=>{x.preventDefault();els.drop.classList.add('drag')}));['dragleave','drop'].forEach(e=>els.drop.addEventListener(e,x=>{x.preventDefault();els.drop.classList.remove('drag')}));els.drop.ondrop=e=>{let f=e.dataTransfer.files[0];if(f){els.file.files=e.dataTransfer.files;els.file.onchange({target:{files:e.dataTransfer.files}})}};els.sample.onclick=()=>load(SAMPLE,'sample JSON');els.download.onclick=()=>{let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(SAMPLE,null,2)],{type:'application/json'}));a.download='sample-reel.json';a.click();URL.revokeObjectURL(a.href)};els.play.onclick=toggle;els.prev.onclick=()=>go(Math.max(0,st.i-1));els.next.onclick=()=>go(Math.min(st.reel.scenes.length-1,st.i+1));els.restart.onclick=()=>go(0);window.onkeydown=e=>{if(!st.reel)return;if(e.code==='Space'){e.preventDefault();toggle()}if(e.key==='ArrowLeft')els.prev.click();if(e.key==='ArrowRight')els.next.click()};
+</script>
 </body>
 </html>
