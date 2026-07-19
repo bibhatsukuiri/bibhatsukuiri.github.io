@@ -44,6 +44,21 @@
       match: 'numerical investigation of a polymer-coated fiber spr platform',
       research: 'This work develops a fibre-guided angular SPR platform using an Ag/Cr/Bi2O3-Al2O3-SiO2/polyimide coating stack for detecting near-unity refractive-index changes relevant to gaseous VOCs. Finite-element analysis shows strong field localisation near the polymer interface around 44°, while the resonance remains stable near 633 to 634 nm. Increasing the sensing-layer index from 1.001 to 1.010 shifts the resonance by 0.5432° and yields about 60.35 deg/RIU sensitivity with only modest linewidth broadening, confirming Ag as the preferred plasmonic film and Cr as the most effective auxiliary layer.',
       authors: ['Amrita Deepika V G', 'Bibhatsu Kuiri', 'Rittwick Mondal', 'Soumyajyoti Kabi', 'Gagan Anand']
+    },
+    {
+      match: 'angularly tunable circular dichroism in a bilayer plasmonic metasurface',
+      research: 'This study introduces a bilayer scythe-shaped gold metasurface in which chirality is controlled through the relative rotation and separation of two plasmonic layers. Finite-element simulations show that asymmetric coupling of left- and right-circularly polarized light produces a maximum circular dichroism of 0.74 at a 24° rotation angle and 50 nm interlayer spacing, representing a 47% increase over the near-aligned configuration. Polarization-dependent electric-field hotspots explain the enhancement and establish geometric interlayer coupling as a compact route to tunable chiral sensing, filtering and polarization control.',
+      authors: ['Semere Araya Asefa', 'Bibhatsu Kuiri', 'Dasol Lee']
+    },
+    {
+      match: 'highly sensitive tunable opto-thermal sensor based on optimized hfo2 defect layer',
+      research: 'This work develops a SiO2/TiO2 one-dimensional photonic crystal with a centrally optimized HfO2 defect layer for optical sensing from 590 to 1600 °C. Temperature-dependent refractive-index and thermal-expansion changes produce a stable, nearly linear redshift of the defect resonance from 1635.04 to 1779.64 nm, with an average sensitivity of about 0.143 nm/°C. The thickness optimization preserves a sharp localized mode with a quality factor near 523, extending defect-mode photonic sensing to furnaces, propulsion systems, reactors and other extreme-temperature environments.',
+      authors: ['Barnali Pal', 'Bibhatsu Kuiri', 'Binoy Das', 'Ardhendu Sekhar Patra']
+    },
+    {
+      match: 'thickness-optimized bk7/ag/ni/s-rich zn-s chalcogenide multilayer',
+      research: 'This study combines a synthesized high-index S80Zn20 chalcogenide film with an optimized BK7/Ag/Ni/Zn-S Kretschmann stack for aqueous refractive-index sensing. Transfer-matrix and finite-element analyses identify 47.58 nm Ag, an operational Ni window near 14 to 16 nm and 6.31 nm Zn-S as the strongest coupling configuration. Across refractive indices from 1.3300 to 1.3390, the resonance shifts with a fitted slope of 286.99 deg/RIU, local sensitivity rises to 323.58 deg/RIU and the figure of merit reaches 85.06 RIU^-1, while a 100-run perturbation study confirms tolerance to small thickness and index variations.',
+      authors: ['Bibhatsu Kuiri', 'Rittwick Mondal', 'Soumyajyoti Kabi', 'Ardhendu Sekhar Patra', 'Sonjoy Mondal']
     }
   ];
 
