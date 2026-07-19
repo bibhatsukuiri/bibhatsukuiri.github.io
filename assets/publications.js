@@ -71,6 +71,21 @@ const reviewedDetails=[
     match:title=>title.includes('ultra-low loss polymer-based photonic crystal fiber supporting 242 oam modes'),
     research:'This study proposes a Topas–Kapton polymer ring-core photonic-crystal fibre that supports 242 stable OAM modes at 1.9 THz and more than 200 modes throughout 1.5 to 3.5 THz. Finite-element optimisation yields mode purity above 0.9, confinement loss near 10⁻⁹ dB/cm, effective-index separation above 10⁻³ and dispersion below 1 ps/THz/cm. Bend tolerance, material loss and ±5% fabrication-variation analysis are included, showing that the simple polymer geometry retains multimode performance under practical design uncertainties.',
     authors:['Bibhatsu Kuiri','Bubai Dutta','Nilanjana Sarkar','Saikat Santra','Paulomi Mandal','Khaleda Mallick','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('development of photonic crystal fiber supporting 124 oam modes'),
+    research:'This work develops a silica-based ring-core photonic-crystal fibre using a high-index lithium-niobate guiding ring and an optimised elliptical-air-hole core. The design supports 124 OAM modes near 1.5 µm with mode purity above 0.9, confinement loss in the 10⁻¹⁰ to 10⁻¹² dB/m range and an approximately flat dispersion variation of 0.5 ps/nm/km across 1.3 to 1.6 µm. Its simple geometry also remains bend tolerant for radii above about 2 cm, making it suitable for high-capacity multimode transmission.',
+    authors:['Bibhatsu Kuiri','Bubai Dutta','Nilanjana Sarkar','Saikat Santra','Rinki Atta','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('direct correlation between void formation and lithium dendrite growth'),
+    research:'This study establishes that interfacial void formation precedes lithium-dendrite nucleation in garnet-based solid-state batteries and begins at current densities roughly one-third below the dendrite-growth threshold. Experiments comparing aluminium and tungsten interlayers are combined with COMSOL current-density modelling and first-principles calculations of lithium-vacancy thermodynamics and migration. Tungsten delays void growth through less favourable vacancy accumulation and larger kinetic barriers, showing that carefully selected metallic interlayers can improve dendrite tolerance without impractically high stack pressure.',
+    authors:['Vikalp Raj','Victor Venturi','Varun R. Kankanallu','Bibhatsu Kuiri','Venkatasubramanian Viswanathan','Naga Phani B. Aetukuri']
+  },
+  {
+    match:title=>title.includes('generation of 200 oam channels for 10 tbps free space data transmission'),
+    research:'This paper proposes a 10 Tbps free-space optical system that combines ten wavelengths, ten OAM states and two polarization states to create 200 parallel 50 Gbps channels. A self-injection-locked quantum-dash laser supplies the wavelength carriers, while Dammann optical vortex gratings enable parallel generation and detection of the OAM modes with reduced source count and system complexity. Over a 10 m link, the architecture achieves crosstalk between about −14.6 and −23.07 dB and a power penalty near 2.1 dB at the forward-error-correction threshold.',
+    authors:['Bubai Dutta','Bibhatsu Kuiri','Nilanjana Sarkar','Binoy Das','Manish Dev Sharma','Ardhendu Sekhar Patra']
   }
 ];
 
