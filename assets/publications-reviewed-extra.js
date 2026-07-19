@@ -58,6 +58,21 @@ const reviewedPublicationExtras = [
     match: 'deep learning prediction of novel hollow core photonic crystal fiber with tuned as2s3',
     research: 'This study proposes a dual-ring hollow-core photonic-crystal fibre that combines As₂S₃ and LiNbO₃ high-index rings to support more than 200 high-purity OAM modes across 1.26 to 1.66 μm. The design maintains mode purity above 95%, power confinement near 0.99, confinement loss on the order of 10⁻⁵ dB/m, near-flat dispersion and modal integrity at bend radii down to 1 cm. A neural network trained on 5,540 FEM-generated data sets predicts effective area and the real and imaginary components of effective index with deviations below 4%, reducing evaluation time from hours of numerical simulation to minutes.',
     authors: ['Bibhatsu Kuiri', 'Aloke Kumar Pathak', 'Nilanjana Sarkar', 'Amlan Das', 'Manish Dev Sharma', 'Ardhendu Sekhar Patra']
+  },
+  {
+    match: 'thermal, electrical, and dielectric properties of xna2o',
+    research: 'This study systematically replaces B₂O₃ with Na₂O in a borosilicate-phosphate glass-ceramic system to connect network modification with thermal, electrical and dielectric performance. Increasing Na₂O expands the glass network, decreases the average nanocrystallite size from 80.3 to 66.78 nm and raises microstrain while retaining a broad thermal-stability range. The higher-sodium compositions show greater ionic conductivity, lower DC and AC activation energies, reduced bulk resistance and non-Debye dielectric relaxation, identifying the x = 0.20 and x = 0.25 glasses as the most promising compositions for energy-storage materials.',
+    authors: ['Dipankar Biswas', 'Ashes Rakshit', 'Souvik Brahma Hota', 'Soumyajyoti Kabi', 'Bibhatsu Kuiri', 'Debasish Roy', 'Rittwick Mondal']
+  },
+  {
+    match: 'enhancing ionic transport and dielectric stability',
+    research: 'This work develops amorphous Na₂O-TeO₂-ZnO-P₂O₅ glasses and demonstrates composition-controlled tuning of their optical and ionic-transport properties. Raising the Na₂O content lowers the optical band gap from 3.15 to 2.43 eV, increases structural disorder, improves AC and DC conductivity and reduces the corresponding activation barriers. Impedance and modulus analyses show lower bulk resistance, faster thermally activated relaxation and an additional space-charge-related process at x = 0.20, establishing the sodium-rich glass as a candidate for solid-state electrolytes and high-performance capacitors.',
+    authors: ['Swagata Nandy', 'Souvik Brahma Hota', 'Rittwick Mondal', 'Debabrata Pramanik', 'Bibhatsu Kuiri', 'Dipankar Biswas']
+  },
+  {
+    match: 'tuning the bandgap of 2d metallic zn nanostructures',
+    research: 'This study demonstrates a scalable room-temperature route for converting metallic Zn nanoparticles into two-dimensional nanoplates and nanosheets through 6 and 12 hours of high-energy ball milling. Despite remaining chemically metallic, the resulting structures exhibit visible photoluminescence associated with electronic transitions between the sp band and upper 3d states. XPS measurements and first-principles calculations confirm the mechanism and show that reducing nanosheet thickness narrows the effective band gap, providing a simple way to tune semiconductor-like optical behaviour in an elemental metal.',
+    authors: ['Subhamay Pramanik', 'Bibhatsu Kuiri', 'Riju Karmakar', 'Sumit Mukherjee', 'Sandip Das', 'Sovanlal Mondal', 'Ajit Kumar Meikap', 'Ardhendu Sekhar Patra', 'Probodh K. Kuiri']
   }
 ];
 
