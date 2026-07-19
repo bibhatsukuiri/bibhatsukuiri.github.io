@@ -3,47 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Academic research profile of Bibhatsu Kuiri, a physics researcher working in computational photonics, optical sensing, and multiphysics modelling.">
+  <meta name="description" content="Academic profile of Dr. Bibhatsu Kuiri, Assistant Professor of Physics, working in computational photonics, optical sensing, multiphysics modelling, and AI-assisted scientific research.">
   <meta name="author" content="Bibhatsu Kuiri">
-  <meta name="theme-color" content="#16324f">
+  <meta name="theme-color" content="#102c46">
   <title>Bibhatsu Kuiri | Academic Research Profile</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #16324f;
-      --navy-deep: #0e2439;
-      --blue: #315f82;
-      --ink: #17212b;
-      --muted: #5f6d79;
-      --paper: #f6f7f8;
+      --navy: #143653;
+      --navy-deep: #0d263d;
+      --blue: #2e668c;
+      --ink: #18232d;
+      --muted: #5d6974;
+      --paper: #f5f7f8;
       --white: #ffffff;
-      --line: #dfe5ea;
-      --soft: #eaf0f4;
-      --max-width: 1120px;
+      --line: #dce3e8;
+      --soft-blue: #eaf1f5;
+      --max-width: 1160px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       color: var(--ink);
       background: var(--white);
       font-family: "Source Sans 3", Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.65;
+      font-size: 16px;
+      line-height: 1.55;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
+    section { scroll-margin-top: 68px; }
 
     .container {
       width: min(calc(100% - 40px), var(--max-width));
@@ -54,13 +48,13 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.97);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(10px);
     }
 
     .nav {
-      min-height: 70px;
+      min-height: 58px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -68,103 +62,111 @@
     }
 
     .brand {
-      text-decoration: none;
       color: var(--navy-deep);
       font-family: "Source Serif 4", Georgia, serif;
-      font-size: 1.18rem;
+      font-size: 1.12rem;
       font-weight: 700;
-      letter-spacing: 0.01em;
+      text-decoration: none;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 24px;
+      gap: 22px;
     }
 
     .nav-links a {
       color: var(--muted);
-      text-decoration: none;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
+      text-decoration: none;
     }
 
     .nav-links a:hover,
-    .nav-links a:focus-visible {
-      color: var(--navy);
+    .nav-links a:focus-visible { color: var(--navy); }
+
+    h1, h2, h3 {
+      margin-top: 0;
+      color: var(--navy-deep);
+      font-family: "Source Serif 4", Georgia, serif;
+      line-height: 1.15;
     }
 
     .hero {
-      background: linear-gradient(180deg, var(--paper) 0%, var(--white) 100%);
+      background: linear-gradient(135deg, #f7f9fa 0%, #ffffff 66%);
       border-bottom: 1px solid var(--line);
     }
 
     .hero-grid {
-      min-height: 610px;
       display: grid;
-      grid-template-columns: 1.3fr 0.7fr;
-      align-items: center;
-      gap: 72px;
-      padding: 72px 0 52px;
+      grid-template-columns: minmax(0, 1fr) 290px;
+      align-items: end;
+      gap: 52px;
+      padding: 40px 0 28px;
     }
 
     .eyebrow {
-      margin: 0 0 16px;
+      margin: 0 0 8px;
       color: var(--blue);
-      font-size: 0.82rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.13em;
       text-transform: uppercase;
     }
 
-    h1,
-    h2,
-    h3 {
-      color: var(--navy-deep);
-      font-family: "Source Serif 4", Georgia, serif;
-      line-height: 1.18;
+    .position {
+      display: inline-flex;
+      margin: 0 0 12px;
+      padding: 5px 10px;
+      color: var(--navy);
+      background: var(--soft-blue);
+      border: 1px solid #d7e4ec;
+      border-radius: 3px;
+      font-size: 0.88rem;
+      font-weight: 700;
     }
 
     h1 {
-      margin: 0;
-      font-size: clamp(3rem, 7vw, 5.6rem);
+      margin-bottom: 8px;
+      font-size: clamp(3rem, 6vw, 4.8rem);
       letter-spacing: -0.045em;
     }
 
     .role {
-      max-width: 720px;
-      margin: 18px 0 0;
+      max-width: 790px;
+      margin: 0;
       color: var(--navy);
-      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+      font-size: clamp(1.12rem, 2.1vw, 1.45rem);
       font-weight: 600;
       line-height: 1.35;
     }
 
     .summary {
-      max-width: 720px;
-      margin: 24px 0 0;
+      max-width: 790px;
+      margin: 14px 0 0;
       color: var(--muted);
-      font-size: 1.08rem;
+      font-size: 1rem;
     }
 
     .actions {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
+      gap: 9px;
+      margin-top: 18px;
     }
 
     .button {
+      min-height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 46px;
-      padding: 10px 18px;
+      padding: 8px 14px;
       border: 1px solid var(--navy);
-      border-radius: 4px;
-      text-decoration: none;
+      border-radius: 3px;
+      font-size: 0.92rem;
       font-weight: 700;
-      transition: 160ms ease;
+      text-decoration: none;
+      transition: 150ms ease;
     }
 
     .button-primary {
@@ -174,152 +176,266 @@
 
     .button-secondary {
       color: var(--navy);
-      background: transparent;
+      background: var(--white);
     }
 
     .button:hover,
     .button:focus-visible {
       transform: translateY(-1px);
-      box-shadow: 0 8px 18px rgba(22, 50, 79, 0.13);
+      box-shadow: 0 7px 15px rgba(20, 54, 83, 0.12);
     }
 
     .portrait-wrap {
-      align-self: end;
       display: flex;
+      align-items: flex-end;
       justify-content: center;
     }
 
     .portrait {
       display: block;
-      width: min(100%, 340px);
-      height: auto;
-      filter: drop-shadow(0 18px 28px rgba(22, 50, 79, 0.18));
+      width: 270px;
+      max-height: 310px;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 22px rgba(20, 54, 83, 0.16));
     }
 
-    section {
-      padding: 84px 0;
-    }
-
-    .section-heading {
+    .metrics {
       display: grid;
-      grid-template-columns: 0.45fr 1fr;
-      gap: 64px;
-      align-items: start;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid var(--line);
     }
 
-    h2 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3rem);
-      letter-spacing: -0.025em;
+    .metric {
+      padding: 15px 18px;
+      border-right: 1px solid var(--line);
     }
 
-    .section-copy {
-      margin: 0;
+    .metric:last-child { border-right: 0; }
+
+    .metric strong {
+      display: block;
+      color: var(--navy-deep);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 1.42rem;
+      line-height: 1.1;
+    }
+
+    .metric span {
       color: var(--muted);
-      font-size: 1.07rem;
+      font-size: 0.82rem;
+      font-weight: 600;
     }
 
-    .research-section {
+    .credentials {
+      background: var(--navy-deep);
+      color: #d8e3eb;
+    }
+
+    .credential-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .credential {
+      padding: 17px 20px;
+      border-right: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .credential:last-child { border-right: 0; }
+
+    .credential strong {
+      display: block;
+      margin-bottom: 2px;
+      color: var(--white);
+      font-size: 0.93rem;
+    }
+
+    .credential span {
+      font-size: 0.83rem;
+      line-height: 1.4;
+    }
+
+    .section {
+      padding: 42px 0;
+    }
+
+    .section-alt {
       background: var(--paper);
       border-top: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1px;
-      margin-top: 46px;
-      background: var(--line);
-      border: 1px solid var(--line);
+    .section-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 22px;
     }
 
-    .focus-card {
-      min-height: 190px;
-      padding: 30px;
-      background: var(--white);
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(1.8rem, 3vw, 2.45rem);
+      letter-spacing: -0.025em;
     }
 
-    .focus-number {
-      display: block;
-      margin-bottom: 24px;
-      color: var(--blue);
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-    }
-
-    h3 {
-      margin: 0 0 10px;
-      font-size: 1.35rem;
-    }
-
-    .focus-card p {
+    .section-intro {
+      max-width: 690px;
       margin: 0;
       color: var(--muted);
     }
 
-    .profile-grid {
+    .research-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 40px;
+      gap: 12px;
     }
 
-    .profile-link {
-      min-height: 120px;
+    .research-card {
+      padding: 18px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .research-card h3 {
+      margin-bottom: 5px;
+      font-size: 1.12rem;
+    }
+
+    .research-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .experience-item {
+      padding: 18px;
+      border: 1px solid var(--line);
+    }
+
+    .experience-head {
       display: flex;
-      flex-direction: column;
+      align-items: start;
       justify-content: space-between;
-      gap: 18px;
-      padding: 22px;
+      gap: 16px;
+      margin-bottom: 6px;
+    }
+
+    .experience-item h3 {
+      margin: 0;
+      font-size: 1.08rem;
+    }
+
+    .experience-item time {
+      flex: 0 0 auto;
+      color: var(--blue);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .experience-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+      font-size: 0.9rem;
+    }
+
+    .experience-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 12px;
+    }
+
+    .panel {
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .panel h3 {
+      margin-bottom: 11px;
+      font-size: 1.18rem;
+    }
+
+    .compact-list {
+      margin: 0;
+      padding-left: 19px;
+      color: var(--muted);
+    }
+
+    .compact-list li { margin: 5px 0; }
+    .compact-list strong { color: var(--ink); }
+
+    .academic-links {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .academic-link {
+      padding: 16px;
       border: 1px solid var(--line);
       text-decoration: none;
-      transition: 160ms ease;
+      transition: 150ms ease;
     }
 
-    .profile-link strong {
+    .academic-link strong {
+      display: block;
+      margin-bottom: 3px;
       color: var(--navy-deep);
       font-family: "Source Serif 4", Georgia, serif;
-      font-size: 1.2rem;
+      font-size: 1.02rem;
     }
 
-    .profile-link span {
+    .academic-link span {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.8rem;
     }
 
-    .profile-link:hover,
-    .profile-link:focus-visible {
+    .academic-link:hover,
+    .academic-link:focus-visible {
       border-color: var(--blue);
       background: var(--paper);
     }
 
     .contact-band {
-      padding: 54px 0;
+      padding: 28px 0;
       color: var(--white);
       background: var(--navy-deep);
     }
 
-    .contact-content {
+    .contact-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 28px;
     }
 
-    .contact-content h2 {
+    .contact-row h2 {
       color: var(--white);
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-size: 1.55rem;
     }
 
-    .contact-content p {
-      max-width: 650px;
-      margin: 10px 0 0;
-      color: #cbd8e3;
+    .contact-row p {
+      margin: 5px 0 0;
+      color: #c8d6e0;
+      font-size: 0.92rem;
     }
 
-    .contact-content .button {
+    .contact-row .button {
       flex: 0 0 auto;
       color: var(--navy-deep);
       background: var(--white);
@@ -327,96 +443,65 @@
     }
 
     footer {
-      padding: 26px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.14);
-      color: #aebfce;
-      background: var(--navy-deep);
-      font-size: 0.9rem;
+      padding: 15px 0;
+      color: #aebfcc;
+      background: #091d2e;
+      font-size: 0.82rem;
     }
 
     .footer-row {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
+      gap: 16px;
     }
 
-    @media (max-width: 820px) {
-      .nav-links {
-        display: none;
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) 230px;
+        gap: 28px;
       }
 
+      .portrait { width: 225px; }
+      .research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .academic-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links { display: none; }
+
       .hero-grid {
-        min-height: auto;
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding-top: 64px;
+        padding: 28px 0 0;
       }
 
       .portrait-wrap {
-        order: -1;
         justify-content: flex-start;
+        max-height: 220px;
+        overflow: hidden;
       }
 
-      .portrait {
-        width: min(74vw, 320px);
-      }
-
-      .section-heading {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .profile-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-content,
-      .footer-row {
-        align-items: flex-start;
-        flex-direction: column;
-      }
+      .portrait { width: 210px; }
+      .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .credential-grid { grid-template-columns: 1fr; }
+      .credential { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.14); }
+      .credential:last-child { border-bottom: 0; }
+      .section-top { align-items: start; flex-direction: column; gap: 8px; }
+      .experience-grid, .highlights-grid { grid-template-columns: 1fr; }
     }
 
-    @media (max-width: 620px) {
-      body {
-        font-size: 16px;
-      }
-
-      .container {
-        width: min(calc(100% - 28px), var(--max-width));
-      }
-
-      .hero-grid {
-        padding: 46px 0 38px;
-      }
-
-      h1 {
-        font-size: clamp(2.8rem, 15vw, 4.3rem);
-      }
-
-      section {
-        padding: 64px 0;
-      }
-
-      .focus-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .focus-card {
-        min-height: auto;
-      }
+    @media (max-width: 520px) {
+      .container { width: min(calc(100% - 28px), var(--max-width)); }
+      h1 { font-size: 2.8rem; }
+      .research-grid, .academic-links { grid-template-columns: 1fr; }
+      .contact-row, .footer-row { align-items: flex-start; flex-direction: column; }
+      .section { padding: 34px 0; }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-      }
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
     }
   </style>
 </head>
@@ -425,9 +510,10 @@
     <div class="container nav">
       <a class="brand" href="#top">Bibhatsu Kuiri</a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#profile">Profile</a>
         <a href="#research">Research</a>
-        <a href="#academic-links">Academic Links</a>
+        <a href="#experience">Experience</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#links">Academic Links</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -438,113 +524,187 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Academic Research Profile</p>
+          <p class="position">Assistant Professor, Chandigarh University</p>
           <h1 id="page-title">Bibhatsu Kuiri</h1>
-          <p class="role">Physics Researcher in Computational Photonics and Multiphysics Modelling</p>
+          <p class="role">Physics | Computational Photonics | Optical Sensing | Multiphysics and AI-Assisted Modelling</p>
           <p class="summary">
-            My academic work focuses on computational approaches to photonic structures, optical sensing,
-            wave propagation, and multiphysics problems in science and engineering.
+            Physicist working on photonic structures, THz and orbital-angular-momentum systems, optical sensors,
+            coupled numerical models, scientific software, and data-driven design methods.
           </p>
           <div class="actions">
-            <a class="button button-primary" href="#research">Research Focus</a>
-            <a class="button button-secondary" href="mailto:bibhatsu.14@gmail.com">Academic Contact</a>
+            <a class="button button-primary" href="https://scholar.google.com/citations?user=RkWlr-AAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+            <a class="button button-secondary" href="https://www.scopus.com/authid/detail.uri?authorId=57217057786" target="_blank" rel="noopener noreferrer">Scopus</a>
+            <a class="button button-secondary" href="mailto:bibhatsu.14@gmail.com">Email</a>
           </div>
         </div>
         <div class="portrait-wrap">
-          <img class="portrait" src="assets/profile.webp" alt="Portrait illustration of Bibhatsu Kuiri" width="340" height="340">
+          <img class="portrait" src="assets/profile.webp" alt="Portrait illustration of Bibhatsu Kuiri" width="270" height="310">
+        </div>
+      </div>
+
+      <div class="container metrics" aria-label="Research profile metrics">
+        <div class="metric"><strong>54+</strong><span>International publications</span></div>
+        <div class="metric"><strong>845</strong><span>Citations</span></div>
+        <div class="metric"><strong>16</strong><span>h-index</span></div>
+        <div class="metric"><strong>2</strong><span>Published patents</span></div>
+      </div>
+    </section>
+
+    <section class="credentials" aria-label="Academic qualifications">
+      <div class="container credential-grid">
+        <div class="credential">
+          <strong>Ph.D. in Physics, 2025</strong>
+          <span>Sidho-Kanho-Birsha University | THz photonic fibres and orbital angular momentum</span>
+        </div>
+        <div class="credential">
+          <strong>M.Sc. in Physics, 2018</strong>
+          <span>Indian Institute of Technology Kharagpur | Advanced computational physics and optics</span>
+        </div>
+        <div class="credential">
+          <strong>National Qualifications</strong>
+          <span>UGC-CSIR NET JRF AIR 106 | JEST AIR 34 | GATE | WB-SET | IIT-JAM</span>
         </div>
       </div>
     </section>
 
-    <section id="profile" aria-labelledby="profile-title">
-      <div class="container section-heading">
-        <div>
-          <p class="eyebrow">Profile</p>
-          <h2 id="profile-title">Academic Overview</h2>
-        </div>
-        <p class="section-copy">
-          I work in physics with an emphasis on numerical modelling and the design of optical and photonic
-          systems. My interests include translating physical principles into reproducible computational models,
-          evaluating device behaviour, and developing scientifically grounded sensing concepts. This website
-          serves as a concise record of my research interests and academic profile.
-        </p>
-      </div>
-    </section>
-
-    <section id="research" class="research-section" aria-labelledby="research-title">
+    <section id="research" class="section section-alt" aria-labelledby="research-title">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-top">
           <div>
-            <p class="eyebrow">Research</p>
-            <h2 id="research-title">Areas of Interest</h2>
+            <p class="eyebrow">Research Focus</p>
+            <h2 id="research-title">Current Academic Areas</h2>
           </div>
-          <p class="section-copy">
-            My research interests are centred on computational physics, photonic device analysis, and optical
-            sensing, with particular attention to clear physical interpretation and reliable numerical methods.
-          </p>
+          <p class="section-intro">My work combines physics-based modelling, computational design, experimentation, and machine-learning methods for optical, material, and coupled engineering systems.</p>
         </div>
 
-        <div class="focus-grid">
-          <article class="focus-card">
-            <span class="focus-number">01</span>
-            <h3>Photonic Structures</h3>
-            <p>Numerical study of wave propagation, resonant structures, photonic crystals, and multilayer optical systems.</p>
+        <div class="research-grid">
+          <article class="research-card">
+            <h3>Computational Photonics</h3>
+            <p>Photonic crystal fibres, resonant structures, multilayer systems, mode analysis, dispersion, and confinement engineering.</p>
           </article>
-          <article class="focus-card">
-            <span class="focus-number">02</span>
-            <h3>Optical Sensing</h3>
-            <p>Design and analysis of refractive-index, biochemical, thermal, and material-sensitive optical sensors.</p>
+          <article class="research-card">
+            <h3>THz and OAM Systems</h3>
+            <p>Low-loss multimode THz guidance, orbital-angular-momentum transmission, bending tolerance, and communication architectures.</p>
           </article>
-          <article class="focus-card">
-            <span class="focus-number">03</span>
-            <h3>Computational Physics</h3>
-            <p>Development of numerical models for electromagnetic, thermal, and coupled physical phenomena.</p>
+          <article class="research-card">
+            <h3>Optical Sensors</h3>
+            <p>Photonic-crystal, SPR, refractive-index, biochemical, thermal, and material-sensitive sensing platforms.</p>
           </article>
-          <article class="focus-card">
-            <span class="focus-number">04</span>
+          <article class="research-card">
             <h3>Multiphysics Modelling</h3>
-            <p>Simulation-led investigation of interacting physical processes in scientific and engineering systems.</p>
+            <p>Electromagnetic, structural, thermal, cardiac, and coupled finite-element models for scientific applications.</p>
+          </article>
+          <article class="research-card">
+            <h3>AI for Physical Systems</h3>
+            <p>Surrogate models, deep-learning prediction, optimisation, scientific data analysis, and simulation-assisted design.</p>
+          </article>
+          <article class="research-card">
+            <h3>Energy and Materials</h3>
+            <p>Solid-state batteries, lithium dendrite suppression, energy-storage materials, glasses, nanomaterials, and composites.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="academic-links" aria-labelledby="links-title">
+    <section id="experience" class="section" aria-labelledby="experience-title">
       <div class="container">
-        <div class="section-heading">
+        <div class="section-top">
           <div>
-            <p class="eyebrow">Profiles</p>
+            <p class="eyebrow">Academic Career</p>
+            <h2 id="experience-title">Research Experience</h2>
+          </div>
+          <p class="section-intro">A concise overview of my institutional research and academic appointments.</p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-item">
+            <div class="experience-head"><h3>Chandigarh University</h3><time>2025 - Present</time></div>
+            <strong>Assistant Professor</strong>
+            <p>Experimental and numerical research on sensors, energy-storage devices, and AI-based surrogate models.</p>
+          </article>
+          <article class="experience-item">
+            <div class="experience-head"><h3>IIT Kanpur</h3><time>2025</time></div>
+            <strong>Project Engineer</strong>
+            <p>Developed a cardiac digital-twin platform using OpenCARP, ParaView, Python, LS-DYNA, FEA, and machine learning.</p>
+          </article>
+          <article class="experience-item">
+            <div class="experience-head"><h3>Sidho-Kanho-Birsha University</h3><time>2019 - 2025</time></div>
+            <strong>Doctoral Researcher</strong>
+            <p>Designed THz photonic fibres for high-order vortex modes using FEM, multiphysics simulation, and AI-assisted optimisation.</p>
+          </article>
+          <article class="experience-item">
+            <div class="experience-head"><h3>Indian Institute of Science</h3><time>2018 - 2019</time></div>
+            <strong>Researcher</strong>
+            <p>Worked on lithium dendrite suppression and membrane-conductivity measurement, contributing to a Nature Materials publication.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="highlights" class="section section-alt" aria-labelledby="highlights-title">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">Academic Record</p>
+            <h2 id="highlights-title">Selected Highlights</h2>
+          </div>
+        </div>
+
+        <div class="highlights-grid">
+          <article class="panel">
+            <h3>Research and Recognition</h3>
+            <ul class="compact-list">
+              <li><strong>Best Paper Award:</strong> IEEE ESCI 2026, Pune.</li>
+              <li><strong>Outstanding Paper Awards:</strong> West Bengal Science and Technology Congress, regional and state levels, 2023 and 2024.</li>
+              <li><strong>Publication record:</strong> Research in Nature Materials and journals covering photonics, sensing, materials, energy, and computational physics.</li>
+              <li><strong>Peer review:</strong> Reviewer for journals including Scientific Reports, Optics Communications, Optical Fiber Technology, and Results in Physics.</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3>Methods and Tools</h3>
+            <ul class="compact-list">
+              <li><strong>Simulation:</strong> COMSOL, Ansys, LS-DYNA, OpenCARP, Lumerical, CST, OptiSystem.</li>
+              <li><strong>Programming:</strong> Python, MATLAB, PyTorch, TensorFlow, scikit-learn, Git.</li>
+              <li><strong>Scientific computing:</strong> FEM, FDTD, multiphysics coupling, optimisation, visualisation, and research software development.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="links" class="section" aria-labelledby="links-title">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">Verified Profiles</p>
             <h2 id="links-title">Academic Links</h2>
           </div>
-          <p class="section-copy">
-            Verified academic and professional links are provided below. Additional publication and research records
-            will be incorporated as the profile is expanded.
-          </p>
         </div>
 
-        <div class="profile-grid">
-          <a class="profile-link" href="https://www.scopus.com/authid/detail.uri?authorId=57217057786" target="_blank" rel="noopener noreferrer">
-            <strong>Scopus</strong>
-            <span>Author ID: 57217057786</span>
+        <div class="academic-links">
+          <a class="academic-link" href="https://scholar.google.com/citations?user=RkWlr-AAAAAJ" target="_blank" rel="noopener noreferrer">
+            <strong>Google Scholar</strong><span>ID: RkWlr-AAAAAJ</span>
           </a>
-          <a class="profile-link" href="https://github.com/bibhatsukuiri" target="_blank" rel="noopener noreferrer">
-            <strong>GitHub</strong>
-            <span>Scientific code and web projects</span>
+          <a class="academic-link" href="https://www.scopus.com/authid/detail.uri?authorId=57217057786" target="_blank" rel="noopener noreferrer">
+            <strong>Scopus</strong><span>Author ID: 57217057786</span>
           </a>
-          <a class="profile-link" href="mailto:bibhatsu.14@gmail.com">
-            <strong>Email</strong>
-            <span>bibhatsu.14@gmail.com</span>
+          <a class="academic-link" href="https://github.com/bibhatsukuiri" target="_blank" rel="noopener noreferrer">
+            <strong>GitHub</strong><span>Scientific code and web projects</span>
+          </a>
+          <a class="academic-link" href="mailto:bibhatsu.14@gmail.com">
+            <strong>Email</strong><span>bibhatsu.14@gmail.com</span>
           </a>
         </div>
       </div>
     </section>
 
     <section id="contact" class="contact-band" aria-labelledby="contact-title">
-      <div class="container contact-content">
+      <div class="container contact-row">
         <div>
           <h2 id="contact-title">Academic correspondence</h2>
-          <p>For research discussions, academic collaboration, or faculty-related communication, please contact me by email.</p>
+          <p>For faculty recruitment, research collaboration, invited lectures, peer review, or scientific consultation.</p>
         </div>
-        <a class="button" href="mailto:bibhatsu.14@gmail.com">Send Email</a>
+        <a class="button" href="mailto:bibhatsu.14@gmail.com">Contact by Email</a>
       </div>
     </section>
   </main>
