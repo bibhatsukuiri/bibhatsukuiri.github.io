@@ -6,7 +6,7 @@ const reviewedPublicationExtras = [
   },
   {
     match: '1600 gbps pam-4 fso link enabled using ofcl-based wdm and oam-multiplexing techniques',
-    research: 'This study proposes a 1.6 Tbps free-space optical link by combining ten wavelength channels, two OAM modes and 80 Gbps PAM-4 modulation. A compact optical-frequency-comb source based on one laser and two cascaded dual-drive Mach–Zehnder modulators generates 40 nearly flat comb lines, reducing source complexity. The work also evaluates PAM-4-carrying OAM beams under clear, weak, moderate and strong atmospheric turbulence, achieving a 1.489 dB power penalty in clear weather and feasible ranges from 162 m in clear conditions to 40 m under strong turbulence.',
+    research: 'This study proposes a 1.6 Tbps free-space optical link by combining ten wavelength channels, two OAM modes and 80 Gbps PAM-4 modulation. A compact optical-frequency-comb source based on one laser and two cascaded dual-drive Mach-Zehnder modulators generates 40 nearly flat comb lines, reducing source complexity. The work also evaluates PAM-4-carrying OAM beams under clear, weak, moderate and strong atmospheric turbulence, achieving a 1.489 dB power penalty in clear weather and feasible ranges from 162 m in clear conditions to 40 m under strong turbulence.',
     authors: ['Bubai Dutta', 'Nilanjana Sarkar', 'Rinki Atta', 'Bibhatsu Kuiri', 'Ardhendu Sekhar Patra']
   },
   {
@@ -73,6 +73,16 @@ const reviewedPublicationExtras = [
     match: 'tuning the bandgap of 2d metallic zn nanostructures',
     research: 'This study demonstrates a scalable room-temperature route for converting metallic Zn nanoparticles into two-dimensional nanoplates and nanosheets through 6 and 12 hours of high-energy ball milling. Despite remaining chemically metallic, the resulting structures exhibit visible photoluminescence associated with electronic transitions between the sp band and upper 3d states. XPS measurements and first-principles calculations confirm the mechanism and show that reducing nanosheet thickness narrows the effective band gap, providing a simple way to tune semiconductor-like optical behaviour in an elemental metal.',
     authors: ['Subhamay Pramanik', 'Bibhatsu Kuiri', 'Riju Karmakar', 'Sumit Mukherjee', 'Sandip Das', 'Sovanlal Mondal', 'Ajit Kumar Meikap', 'Ardhendu Sekhar Patra', 'Probodh K. Kuiri']
+  },
+  {
+    match: 'mitigation of nonlinear responses in polmux-based long-haul optical communication system',
+    research: 'This numerical work combines polarization multiplexing, duo-binary modulation and cascaded single-mode and dispersion-compensating fibre with an FSO terminal to suppress self-phase modulation, stimulated Brillouin scattering and chromatic dispersion in a long-haul link. The optimized system transmits 10 Gbps over 120 km SMF, 24 km DCF and 800 m FSO at 10 dBm with a Q-factor of 6.29 and BER of 3.84 × 10⁻¹⁰. It also supports 20 Gbps over 70 km SMF, 14 km DCF and 800 m FSO with BER of 1.67 × 10⁻⁹, showing that higher launch power can be used without severe nonlinear degradation.',
+    authors: ['Nilanjana Sarkar', 'Aloke Kumar Pathak', 'Amlan Das', 'Bibhatsu Kuiri', 'Ardhendu Sekhar Patra']
+  },
+  {
+    match: 'photo-effective high temperature sensor employing 1-d photonic crystal',
+    research: 'This study develops a one-dimensional TiC/ZrO₂ photonic crystal with a central MgO defect layer for temperature sensing from 1000 to 2000 °C. Transfer-matrix analysis shows a nearly linear redshift of the defect resonance by about 0.5 nm for every 100 °C increase, with sensitivity close to 0.0049 nm/°C. Optimizing the structure to 14 layer pairs narrows the FWHM to 0.66464 nm and raises the quality factor to 8417.181, demonstrating stable resonance tracking under extreme-temperature conditions.',
+    authors: ['Barnali Pal', 'Saikat Santra', 'Bibhatsu Kuiri', 'Dipankar Biswas', 'Santanu Mishra', 'Ardhendu Sekhar Patra']
   }
 ];
 
