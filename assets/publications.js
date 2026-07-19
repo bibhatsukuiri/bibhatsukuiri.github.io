@@ -26,6 +26,21 @@ const reviewedDetails=[
     match:title=>title.includes('bidirectional hybrid wdm-ofdm network for multiservice communication'),
     research:'This work demonstrates a bidirectional multiservice WDM-OFDM network using a self-injection-locked quantum-dash laser as a compact multiwavelength source. Four simultaneous 10 Gbps channels deliver wired, 100 GHz millimetre-wave, free-space-optical and wireless services through a 50 km fibre backbone, while separate wavelength sets for downstream and upstream transmission reduce Rayleigh-backscattering noise. The architecture combines multi-service delivery, optical-source consolidation and low-noise bidirectional transport, with low power penalties and QAM error-vector magnitudes below the reported limits.',
     authors:['Paulomi Mandal','Khaleda Mallick','Saikat Santra','Bibhatsu Kuiri','Bubai Dutta','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('bidirectional ofdm-mmwof transport system based on mixed qam'),
+    research:'This paper experimentally demonstrates a bidirectional OFDM millimetre-wave-over-fibre system for 5G access using mixed 16-QAM and 32-QAM, a dual-mode colourless laser diode and an RSOA. An orthogonal quadruple-frequency millimetre-wave source supports baseband transmission over 80 km fibre with 500 m/100 m FSO links and wireless transmission over 80 km fibre with 100 m/50 m radio links for downlink/uplink operation. The main novelty is the use of mixed-QAM OFDM to improve spectral efficiency and outperform PAM-4 under long-reach conditions while different uplink and downlink frequencies reduce Rayleigh-backscattering noise.',
+    authors:['Khaleda Mallick','Paulomi Mandal','Bubai Dutta','Bibhatsu Kuiri','Saikat Santra','Rahul Mukherjee','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('intensification of noise tolerance against rayleigh backscattering'),
+    research:'This study demonstrates a bidirectional 10 Gbps WDM-FSO link that uses separate OFDM subcarrier bands for downstream and upstream transmission to suppress Rayleigh-backscattering noise. The signal is carried through 55 km single-mode fibre and a 650 m free-space link using a doublet-lens arrangement, while an RSOA remodulates the uplink. The dual-band approach reduces the total-link power penalty from about 8 to 9 dB to below 1 dB, while maintaining BER below the FEC limit, EVM below 12.35% and SNR above 19 dB.',
+    authors:['Paulomi Mandal','Khaleda Mallick','Bubai Dutta','Bibhatsu Kuiri','Saikat Santra','Nilanjana Sarkar','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('bidirectional ofdm based mmw/thzw over fiber system'),
+    research:'This work establishes and compares bidirectional OFDM-based millimetre-wave-over-fibre and terahertz-wave-over-fibre links for 5G fronthaul. Hybrid self- and external-injection locking of L- and C-band quantum-dash lasers generates 60 GHz MMW and 1.3/1.1 THz carriers, while separate optical bands for downlink and uplink reduce Rayleigh backscattering and intensity noise. The comparison shows that MMW transmission is better suited to longer reach, whereas THz transmission supports higher data rates over shorter distances, providing a clear design trade-off for future access networks.',
+    authors:['Khaleda Mallick','Paulomi Mandal','Bubai Dutta','Bibhatsu Kuiri','Saikat Santra','Rahul Mukherjee','Ardhendu Sekhar Patra']
   }
 ];
 
