@@ -1,11 +1,7 @@
-# Hi there, I'm Bibhatsu Kuiri 👋
+# Bibhatsu Kuiri | Academic Research Profile
 
-🎓 **MSc in Physics**  
-📚 I'm currently pursuing my Master's degree in Physics with a keen interest in research and scientific exploration.  
-🔬 My areas of focus include magnetism, quantum mechanics, and computational physics.  
+This repository contains the source for the personal academic website of Bibhatsu Kuiri.
 
-## Get in Touch
-- **Email:** [bibhatsu.14@skbu.ac.in]
-- **LinkedIn:** [@bibhatsu]
+The website presents a concise overview of research interests in computational photonics, optical sensing, computational physics, and multiphysics modelling.
 
-Thanks for visiting my profile!
+Live website: https://bibhatsukuiri.github.io
