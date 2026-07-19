@@ -56,6 +56,21 @@ const reviewedDetails=[
     match:title=>title.includes('10 gbps wired and 10 gbps/20 ghz wireless transmission system'),
     research:'This experimental work uses the orthogonal S and P polarization states of one optical carrier to transmit simultaneous 10 Gbps wired OFDM data and 10 Gbps/20 GHz wireless data. Polarization multiplexing enables both services to share an 80 km fibre link, after which a polarization beam splitter separates them without requiring wavelength-selective filtering; the wireless channel then continues over a 25 m radio link. The architecture achieves low power penalties of about 1.4 dB for wired transmission and 1.8 dB for wireless transmission, with BER below the FEC limit and EVM below 13%.',
     authors:['Paulomi Mandal','Bibhatsu Kuiri','Nilanjana Sarkar','Suchismita Banerjee','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('640 gbps fso data transmission system'),
+    research:'This work demonstrates a 640 Gbps free-space optical link by combining 16 wavelength channels generated from a single-laser optical frequency comb with four OAM modes of topological charge 4, 8, 12 and 16. The 4 × 16 × 10 Gbps signal is transmitted over 180 m, while two cascaded dual-drive Mach–Zehnder modulators generate comb lines with side-mode suppression above 32 dB and the larger OAM spacing reduces intermodal crosstalk. The system achieves BER below 10⁻⁹, Q-factor above 5.5 and a total power penalty of about 2.91 dB.',
+    authors:['Bubai Dutta','Nilanjana Sarkar','Rinki Atta','Bibhatsu Kuiri','Saikat Santra','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('hybrid wdm-fso-pon with integrated smf/fso link'),
+    research:'This paper develops a fault-tolerant bidirectional WDM-PON in which parallel single-mode-fibre and 650 m free-space-optical paths maintain data transfer even when one route fails or fibre installation is geographically restricted. Odd and even interleaver ports, together with different carrier wavelengths for uplink and downlink, suppress Rayleigh-backscattering noise while carrying 4 × 10 Gbps downlink and 2 × 10 Gbps uplink services for wired and wireless users. Over the integrated 60 km fibre and FSO route, the demonstrated channels maintain BER near 10⁻⁹ with power penalties below 1 dB.',
+    authors:['Paulomi Mandal','Nilanjana Sarkar','Saikat Santra','Bubai Dutta','Bibhatsu Kuiri','Khaleda Mallick','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('ultra-low loss polymer-based photonic crystal fiber supporting 242 oam modes'),
+    research:'This study proposes a Topas–Kapton polymer ring-core photonic-crystal fibre that supports 242 stable OAM modes at 1.9 THz and more than 200 modes throughout 1.5 to 3.5 THz. Finite-element optimisation yields mode purity above 0.9, confinement loss near 10⁻⁹ dB/cm, effective-index separation above 10⁻³ and dispersion below 1 ps/THz/cm. Bend tolerance, material loss and ±5% fabrication-variation analysis are included, showing that the simple polymer geometry retains multimode performance under practical design uncertainties.',
+    authors:['Bibhatsu Kuiri','Bubai Dutta','Nilanjana Sarkar','Saikat Santra','Paulomi Mandal','Khaleda Mallick','Ardhendu Sekhar Patra']
   }
 ];
 
