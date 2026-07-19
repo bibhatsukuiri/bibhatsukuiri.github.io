@@ -1,5 +1,20 @@
 const data=window.PUBLICATIONS||[];
 const list=document.getElementById('publication-list'),search=document.getElementById('search'),sort=document.getElementById('sort'),year=document.getElementById('year'),count=document.getElementById('result-count'),empty=document.getElementById('empty');
+
+const reviewedDetails=[
+  {
+    match:title=>title.includes('bidirectional hybrid ofdm based free')&&title.includes('wireless-over-fiber'),
+    research:'This study experimentally demonstrates a bidirectional multiservice transport system combining 50 km single-mode fibre with free-space optical and radio-frequency wireless links. Polarization multiplexing carries a 12 Gbps OFDM stream and 79 CATV channels downstream, while reflective semiconductor optical amplifiers reuse the optical carriers for 10 Gbps/5 GHz and 5 Gbps/3.5 GHz uplinks. The novelty lies in integrating OFDM, carrier reuse and polarization multiplexing within one cost-conscious fibre-FSO-wireless architecture, with receiver processing improving BER, SNR and CATV signal quality.',
+    authors:['Rahul Mukherjee','Khaleda Mallick','Paulomi Mandal','Bubai Dutta','Bibhatsu Kuiri','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('pam-4 based long-range free-space-optics communication system'),
+    research:'This work demonstrates an 88 Gbps PAM-4 free-space optical link over 555 m using eight modes from a self-injection-locked quantum-dash laser and Reed-Solomon coding. Self-injection locking provides narrow-linewidth multiwavelength carriers without requiring an external master laser, while the coding stage improves receiver sensitivity by about 4 dB and preserves open eye diagrams after transmission. The key novelty is the combination of a compact multi-carrier laser source, spectrally efficient PAM-4 modulation and error correction for long-range, high-capacity FSO communication.',
+    authors:['Rahul Mukherjee','Khaleda Mallick','Bibhatsu Kuiri','Saikat Santra','Bubai Dutta','Paulomi Mandal','Ardhendu Sekhar Patra']
+  }
+];
+
+function reviewedFor(title){const normalized=title.toLowerCase();return reviewedDetails.find(item=>item.match(normalized))||null}
 function focusFor(t){const s=t.toLowerCase();
 if(s.includes('covid-19'))return'Develops a mathematical analysis of COVID-19 transmission in India and examines its broader impact.';
 if(s.includes('lithium dendrite')||s.includes('void formation'))return'Examines the relationship between interfacial void formation and lithium dendrite growth in solid-state electrolytes with metallic interlayers.';
@@ -26,7 +41,18 @@ if(s.includes('ag-cu2o'))return'Investigates the combined photoluminescent and a
 if(s.includes('bandgap')&&s.includes('zn'))return'Investigates bandgap tuning in two-dimensional metallic zinc nanostructures.';
 if(s.includes('glass')||s.includes('glassy')||s.includes('chalcogenide')){if(s.includes('energy storage'))return'Studies composition-dependent ionic transport and dielectric stability in phosphate-glass systems for energy-storage applications.';return'Investigates composition-dependent thermal, electrical, dielectric and optical behaviour in functional glass systems.'}
 return'Investigates '+t.charAt(0).toLowerCase()+t.slice(1)+'.'}
+
 function esc(v){return String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-const papers=data.map(p=>{const d=document.createElement('details');d.className='publication';d.dataset.year=p.y;d.dataset.if=p.f||0;d.dataset.order=p.o;d.dataset.search=(p.t+' '+p.j+' '+p.y).toLowerCase();d.innerHTML=`<summary><span><span class="publication-title">${esc(p.t)}</span><span class="publication-meta">${esc(p.j)} <span aria-hidden="true">·</span> ${p.y}</span></span><span class="toggle" aria-hidden="true"></span></summary><div class="publication-details"><p><strong>Research focus:</strong> ${esc(focusFor(p.t))}</p><p><strong>Authorship role:</strong> ${esc(p.r)}</p>${p.d?`<a class="paper-link" href="${esc(p.d)}" target="_blank" rel="noopener noreferrer">Open paper</a>`:''}</div>`;d.addEventListener('toggle',()=>{if(d.open)papers.forEach(x=>{if(x!==d)x.open=false})});list.appendChild(d);return d});
+function authorsHTML(authors){return authors.map(name=>name.toLowerCase()==='bibhatsu kuiri'?`<strong class="self-author">${esc(name)}</strong>`:esc(name)).join(', ')}
+
+const papers=data.map(p=>{
+  const reviewed=reviewedFor(p.t);
+  const research=reviewed?.research||p.research||focusFor(p.t);
+  const authors=reviewed?.authors||p.authors||p.a||null;
+  const d=document.createElement('details');
+  d.className='publication';d.dataset.year=p.y;d.dataset.if=p.f||0;d.dataset.order=p.o;d.dataset.search=(p.t+' '+p.j+' '+p.y).toLowerCase();
+  d.innerHTML=`<summary><span><span class="publication-title">${esc(p.t)}</span><span class="publication-meta">${esc(p.j)} <span aria-hidden="true">·</span> ${p.y}</span></span><span class="toggle" aria-hidden="true"></span></summary><div class="publication-details"><p><strong>Research:</strong> ${esc(research)}</p>${authors?`<p><strong>Authors:</strong> ${authorsHTML(authors)}</p>`:''}${p.d?`<a class="paper-link" href="${esc(p.d)}" target="_blank" rel="noopener noreferrer">Open paper</a>`:''}</div>`;
+  d.addEventListener('toggle',()=>{if(d.open)papers.forEach(x=>{if(x!==d)x.open=false})});list.appendChild(d);return d
+});
 function applyView(){const q=search.value.trim().toLowerCase(),y=year.value,m=sort.value;papers.forEach(p=>p.hidden=!((!q||p.dataset.search.includes(q))&&(y==='all'||p.dataset.year===y)));[...papers].sort((a,b)=>{const ay=+a.dataset.year,by=+b.dataset.year,ai=+a.dataset.if,bi=+b.dataset.if,ao=+a.dataset.order,bo=+b.dataset.order;if(m==='year-asc')return ay-by||ao-bo;if(m==='if-desc')return bi-ai||by-ay||bo-ao;if(m==='if-asc')return ai-bi||by-ay||bo-ao;return by-ay||bo-ao}).forEach(p=>list.appendChild(p));const n=papers.filter(p=>!p.hidden).length;count.textContent=`Showing ${n} publication${n===1?'':'s'}`;empty.classList.toggle('visible',n===0)}
 search.addEventListener('input',applyView);sort.addEventListener('change',applyView);year.addEventListener('change',applyView);applyView();
