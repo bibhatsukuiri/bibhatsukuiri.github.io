@@ -41,6 +41,21 @@ const reviewedDetails=[
     match:title=>title.includes('bidirectional ofdm based mmw/thzw over fiber system'),
     research:'This work establishes and compares bidirectional OFDM-based millimetre-wave-over-fibre and terahertz-wave-over-fibre links for 5G fronthaul. Hybrid self- and external-injection locking of L- and C-band quantum-dash lasers generates 60 GHz MMW and 1.3/1.1 THz carriers, while separate optical bands for downlink and uplink reduce Rayleigh backscattering and intensity noise. The comparison shows that MMW transmission is better suited to longer reach, whereas THz transmission supports higher data rates over shorter distances, providing a clear design trade-off for future access networks.',
     authors:['Khaleda Mallick','Paulomi Mandal','Bubai Dutta','Bibhatsu Kuiri','Saikat Santra','Rahul Mukherjee','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('100 gbps data transmission based on different')&&title.includes('oam beam multiplexing'),
+    research:'This work proposes a 100 Gbps free-space optical link by combining ten wavelength channels with ten mutually orthogonal OAM beams carrying topological charges from l = 2 to 11. The 10 × 10 Gbps signal is transmitted over 3.2 km in clear weather and evaluated under haze, rain and fog, while a single vortex-lens arrangement keeps the architecture comparatively simple. OAM multiplexing lowers crosstalk by about 16 dB compared with conventional Gaussian-beam WDM and achieves a BER of approximately 5 × 10⁻⁹ with a power penalty near 2.4 dB.',
+    authors:['Bubai Dutta','Bibhatsu Kuiri','Saikat Santra','Nilanjana Sarkar','Ikbal Ahamed Biswas','Rinki Atta','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('design and optimization of photonic crystal fiber with low confinement loss guiding 98 oam modes'),
+    research:'This paper introduces an FEM-optimised circular photonic-crystal fibre with an SF2-doped ring core and three air-hole layers for OAM transmission across 1 to 3 THz. The comparatively simple structure supports 98 stable OAM modes with mode purity above 0.86, confinement loss below 10⁻¹¹ dB/cm, dispersion approaching 0.02 ps/THz/cm and a large effective mode area. The study also evaluates bend tolerance, intermodal separation, material absorption, stress and gravity-induced deformation, giving a broader assessment of both optical performance and structural practicality.',
+    authors:['Bibhatsu Kuiri','Bubai Dutta','Nilanjana Sarkar','Saikat Santra','Paulomi Mandal','Khaleda Mallick','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('10 gbps wired and 10 gbps/20 ghz wireless transmission system'),
+    research:'This experimental work uses the orthogonal S and P polarization states of one optical carrier to transmit simultaneous 10 Gbps wired OFDM data and 10 Gbps/20 GHz wireless data. Polarization multiplexing enables both services to share an 80 km fibre link, after which a polarization beam splitter separates them without requiring wavelength-selective filtering; the wireless channel then continues over a 25 m radio link. The architecture achieves low power penalties of about 1.4 dB for wired transmission and 1.8 dB for wireless transmission, with BER below the FEC limit and EVM below 13%.',
+    authors:['Paulomi Mandal','Bibhatsu Kuiri','Nilanjana Sarkar','Suchismita Banerjee','Ardhendu Sekhar Patra']
   }
 ];
 
