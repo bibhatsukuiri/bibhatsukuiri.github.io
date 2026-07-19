@@ -11,6 +11,21 @@ const reviewedDetails=[
     match:title=>title.includes('pam-4 based long-range free-space-optics communication system'),
     research:'This work demonstrates an 88 Gbps PAM-4 free-space optical link over 555 m using eight modes from a self-injection-locked quantum-dash laser and Reed-Solomon coding. Self-injection locking provides narrow-linewidth multiwavelength carriers without requiring an external master laser, while the coding stage improves receiver sensitivity by about 4 dB and preserves open eye diagrams after transmission. The key novelty is the combination of a compact multi-carrier laser source, spectrally efficient PAM-4 modulation and error correction for long-range, high-capacity FSO communication.',
     authors:['Rahul Mukherjee','Khaleda Mallick','Bibhatsu Kuiri','Saikat Santra','Bubai Dutta','Paulomi Mandal','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('spreading of covid-19 in india'),
+    research:'This work applies a parameter-optimised SEIR model to official Indian COVID-19 infection and mortality data available up to 10 October 2020. The fitted model estimates key epidemiological quantities, including a basic reproduction number of about 2.97, and examines long-term trajectories of infections, recoveries and deaths for the national population. Its main contribution is a data-calibrated mathematical framework that could be adapted to study other infectious-disease outbreaks, while acknowledging the limitations of a simplified population-level model.',
+    authors:['Bibhatsu Kuiri','Bubai Dutta','Saikat Santra','Paulomi Mandal','Khaleda Mallick','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('mitigation of rayleigh backscattering in rof-wdm-pon'),
+    research:'This study proposes a bidirectional 10 Gbps radio-over-fibre WDM-PON that suppresses Rayleigh-backscattering and remodulation noise by assigning different wavelengths to downstream and upstream signals. A cross-wavelength network prevents counter-propagating signals of the same wavelength from sharing one feeder fibre, while self-coherent detection recovers wired baseband and 50 GHz wireless signals through homodyne and heterodyne detection. Transmission over 50 km fibre and a 15 m wireless link was achieved with low power penalties, clear signal diagrams and EVM below 13%.',
+    authors:['Paulomi Mandal','Khaleda Mallick','Bubai Dutta','Bibhatsu Kuiri','Saikat Santra','Ardhendu Sekhar Patra']
+  },
+  {
+    match:title=>title.includes('bidirectional hybrid wdm-ofdm network for multiservice communication'),
+    research:'This work demonstrates a bidirectional multiservice WDM-OFDM network using a self-injection-locked quantum-dash laser as a compact multiwavelength source. Four simultaneous 10 Gbps channels deliver wired, 100 GHz millimetre-wave, free-space-optical and wireless services through a 50 km fibre backbone, while separate wavelength sets for downstream and upstream transmission reduce Rayleigh-backscattering noise. The architecture combines multi-service delivery, optical-source consolidation and low-noise bidirectional transport, with low power penalties and QAM error-vector magnitudes below the reported limits.',
+    authors:['Paulomi Mandal','Khaleda Mallick','Saikat Santra','Bibhatsu Kuiri','Bubai Dutta','Ardhendu Sekhar Patra']
   }
 ];
 
