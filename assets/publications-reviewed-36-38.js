@@ -59,6 +59,26 @@
       match: 'thickness-optimized bk7/ag/ni/s-rich zn-s chalcogenide multilayer',
       research: 'This study combines a synthesized high-index S80Zn20 chalcogenide film with an optimized BK7/Ag/Ni/Zn-S Kretschmann stack for aqueous refractive-index sensing. Transfer-matrix and finite-element analyses identify 47.58 nm Ag, an operational Ni window near 14 to 16 nm and 6.31 nm Zn-S as the strongest coupling configuration. Across refractive indices from 1.3300 to 1.3390, the resonance shifts with a fitted slope of 286.99 deg/RIU, local sensitivity rises to 323.58 deg/RIU and the figure of merit reaches 85.06 RIU^-1, while a 100-run perturbation study confirms tolerance to small thickness and index variations.',
       authors: ['Bibhatsu Kuiri', 'Rittwick Mondal', 'Soumyajyoti Kabi', 'Ardhendu Sekhar Patra', 'Sonjoy Mondal']
+    },
+    {
+      match: 'semiconductor cspbbr3 perovskite integrated photonic resonators',
+      research: 'This work integrates a CsPbBr3 perovskite cavity between two SiO2/TiO2 distributed Bragg mirrors to amplify its thermo-optic response at the 1550 nm telecom wavelength. Heating from 25 to 250 °C shifts the defect resonance from 1549.14 to 1504.11 nm while maintaining a nearly constant linewidth of about 2.78 nm, sensitivity close to -0.20 nm/°C and a quality factor between approximately 541 and 557. The design converts the strong refractive-index response of the perovskite into a compact, predictable wavelength readout for optical thermometry.',
+      authors: ['Bibhatsu Kuiri', 'Rittwick Mondal', 'Kaushik Pal', 'Nidhi Asthana']
+    },
+    {
+      match: 'the real-time optical readout of phenol concentration using photonic crystal sensor',
+      research: 'This study places a phenol-water-1-octanol solution inside the central cavity of a symmetric SiO2/TiO2 photonic crystal, enabling phenol concentration to be read directly from the defect-mode wavelength near 1550 nm. Across phenol concentrations from 0.75 to 5.51 wt%, the associated refractive-index variation shifts the resonance from 1552.31 to 1555.79 nm with R² = 0.9976 and an average sensitivity of about 540 nm/RIU. The resonance retains a quality factor near 300 and a figure of merit of 82 to 125 RIU^-1, providing a simple linear optical platform for aqueous phenol monitoring.',
+      authors: ['Bibhatsu Kuiri', 'Binoy Das', 'Rajesh Dey', 'Ardhendu Sekhar Patra']
+    },
+    {
+      match: 'label-free ultra-sensitive wavelength-shift sensing with a high-contrast si-air photonic microcavity',
+      research: 'This work introduces the APSi-OGS, a high-contrast Si/air photonic microcavity whose gas-accessible defect region converts near-unity refractive-index changes into ultra-sharp wavelength shifts around 1550 nm. Changing the cavity index from 1.0001 to 1.0009 produces an almost perfectly linear response with sensitivity of 1191.57 nm/RIU, linewidths of only 0.008 to 0.012 nm and a quality factor reaching 1.94 × 10^5. Cavity-thickness, mirror-pair, angular and thermo-optic analyses further define the fabrication tolerance and alignment requirements of this label-free gas-sensing platform.',
+      authors: ['Bibhatsu Kuiri', 'Gour Kanti Chandra', 'Arpan Chakraborty', 'Mohit Yadav']
+    },
+    {
+      match: 'bend-insensitive topas-based terahertz photonic crystal fiber',
+      research: 'This study develops a fabrication-friendly TOPAS ring-core photonic crystal fibre that combines dispersion tailoring, ultralow leakage and large-capacity OAM guidance across 2.2 to 3.2 THz. The fibre supports 178 OAM modes at 2.6 THz with 98.8 to 99.4% mode purity, confinement loss in the 10^-8 to 10^-11 dB/km range and dispersion as low as 0.42 ps/(nm·km). Stable guidance at bend radii near 5 cm, less than 0.35% effective-index change under ±3% dimensional errors and high purity from 15 to 75 °C demonstrate unusual robustness for next-generation hybrid THz communication links.',
+      authors: ['Ammar Armghan', 'Sultan S. Aldkeelalah', 'Slim Chaoui', 'Bibhatsu Kuiri']
     }
   ];
 
