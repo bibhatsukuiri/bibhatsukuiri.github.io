@@ -43,6 +43,21 @@ const reviewedPublicationExtras = [
     match: 'role of plasmonic layer with sno2 thin film to improve uv photoluminescence and photoresponse',
     research: 'This experimental study integrates a non-noble aluminium plasmonic film with SnO₂ in a SnO₂/Al/Si heterostructure to enhance ultraviolet emission and detection. Excitation near the approximately 270 nm aluminium surface-plasmon resonance drives interfacial electron transfer into SnO₂, producing about fivefold stronger UV photoluminescence than bare SnO₂. A proof-of-concept photodetector consequently delivers nearly three times higher responsivity and an approximately tenfold improvement in on-off ratio under 275 nm illumination, demonstrating that one plasmonic layer can simultaneously improve optical emission and photoresponse.',
     authors: ['Subhamay Pramanik', 'Rajesh Mandal', 'Bibhatsu Kuiri', 'Sudipta Kumar Sarkar', 'Sovanlal Mondal', 'Ardhendu Sekhar Patra', 'Rajib Nath', 'Probodh Kumar Kuiri']
+  },
+  {
+    match: 'investigation of annealing effect on the structural and optical properties of cds nanoparticles',
+    research: 'This study uses an aqueous Pleurotus ostreatus mushroom extract as a green capping agent to synthesize CdS nanoparticles and then isolates the effect of thermal annealing on their structure and optical response. Both samples retain the cubic CdS phase, while annealing increases the crystallite size from 4.33 to 4.61 nm and the TEM-derived mean particle size from 7.02 to 7.61 nm. The treatment shifts the absorption edge, reduces the optical band gap from 2.55 to 2.49 eV and modifies photoluminescence, refractive index, absorption and optical conductivity, providing a direct comparison of how post-synthesis heating tunes eco-friendly CdS nanomaterials.',
+    authors: ['Parimal Tudu', 'Rittwick Mondal', 'Saikat Santra', 'Bibhatsu Kuiri', 'Dipankar Biswas', 'Soumyajyoti Kabi', 'Md. Mohi Uddin', 'Saheli Chowdhury', 'Ardhendu Sekhar Patra', 'Sonjoy Mondal']
+  },
+  {
+    match: 'synergy of photoluminescence emission and antibacterial activity of ag-cu2o nanocomposite',
+    research: 'This work creates Ag-Cu₂O nanocomposites by a room-temperature aqueous route and demonstrates a direct link between Ag loading, Cu₂O crystallite stress and multifunctional optical and antibacterial behaviour. Increasing Ag concentration reduces the Cu₂O crystallite size, raises lattice stress and tunes the optical band gap, while the 1.5Ag-Cu₂O composition produces approximately 5.4-fold stronger violet-blue photoluminescence than pure Cu₂O. Experimental strain analysis and density-of-states calculations explain the emission enhancement, and the same composition inhibits both Enterococcus faecalis and Escherichia fergusonii with a minimum inhibitory concentration of 0.12 mg/ml, connecting optoelectronic functionality with water-treatment potential.',
+    authors: ['Saikat Santra', 'Parimal Tudu', 'Bibhatsu Kuiri', 'Subhamay Pramanik', 'Ardhendu Sekhar Patra', 'Probodh K. Kuiri', 'Sourav Gorai', 'Subrata Raha']
+  },
+  {
+    match: 'deep learning prediction of novel hollow core photonic crystal fiber with tuned as2s3',
+    research: 'This study proposes a dual-ring hollow-core photonic-crystal fibre that combines As₂S₃ and LiNbO₃ high-index rings to support more than 200 high-purity OAM modes across 1.26 to 1.66 μm. The design maintains mode purity above 95%, power confinement near 0.99, confinement loss on the order of 10⁻⁵ dB/m, near-flat dispersion and modal integrity at bend radii down to 1 cm. A neural network trained on 5,540 FEM-generated data sets predicts effective area and the real and imaginary components of effective index with deviations below 4%, reducing evaluation time from hours of numerical simulation to minutes.',
+    authors: ['Bibhatsu Kuiri', 'Aloke Kumar Pathak', 'Nilanjana Sarkar', 'Amlan Das', 'Manish Dev Sharma', 'Ardhendu Sekhar Patra']
   }
 ];
 
