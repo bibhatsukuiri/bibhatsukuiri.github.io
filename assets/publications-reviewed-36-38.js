@@ -14,6 +14,21 @@
       match: 'tunable 1-d photonic crystal sensor for high temperature measurement by introducing double defect mode',
       research: 'This work introduces a GaN/Si3N4 one-dimensional photonic crystal containing two air-defect cavities, producing two independently trackable resonance modes instead of the conventional single-defect response. Transfer-matrix simulations from 1000 to 1700 °C show nearly linear redshifts, with sensitivities of about 0.008 nm/°C for mode 1 and 0.0139 nm/°C for mode 2. The dual-mode architecture provides wavelength flexibility, improving quality factors with temperature and extending photonic-crystal sensing to harsh environments such as turbines, furnaces and high-temperature process monitoring.',
       authors: ['Barnali Pal', 'Bibhatsu Kuiri', 'Saikat Santra', 'Dipankar Biswas', 'Probodh Kumar Kuiri', 'Ardhendu Sekhar Patra']
+    },
+    {
+      match: 'experimental and computational investigation of fiber-matrix interactions in glass fiber/pa6/hdpe tertiary composites',
+      research: 'This work combines reactive compatibilization, glass-fiber reinforcement and finite-element modelling to develop PA6/HDPE tertiary composites for lightweight structural use. HDPE-g-MAH improves bonding between the immiscible polymer phases, while the 70/30 PA6/HDPE matrix reinforced with 5 wt% glass fiber delivers the best balance of strength, impact resistance of about 41 kJ/m² and hardness near 91 HRB. Higher fiber loading increases tensile and flexural stiffness, and the simulations independently confirm improved stress transfer, reduced deformation and greater load-bearing capacity.',
+      authors: ['Deepak Kumar', 'Bibhatsu Kuiri', 'Amika', 'Dinesh Kumar', 'Arvind Singh Chauhan', 'Suneev Anil Bansal']
+    },
+    {
+      match: 'reinforcing polymer nanocomposites: the transformative role of eri silk fibroin',
+      research: 'This study develops a biodegradable PCL/Eri-silk-fibroin composite membrane and demonstrates how the semi-crystalline fibroin phase reinforces the polymer through improved interfacial bonding and load transfer. The optimized 70:30 membrane reaches a tensile strength of 7.28 MPa, strain of 5.66% and Young’s modulus of about 128.6 MPa, while numerical analysis reproduces the stress response and shows elastic-energy storage approaching 35 nJ. The combination of mechanical durability, controlled pores and biodegradability supports applications in water and air filtration, wound dressings, protective clothing and sustainable packaging.',
+      authors: ['Nidhi Asthana', 'Kaushik Pal', 'Lalita Chopra', 'Bibhatsu Kuiri', 'Anshuman Srivastava', 'Sudipta Mukherjee', 'M. M. Abdullah', 'Hasan B. Albargi']
+    },
+    {
+      match: 'defect mode assisted 1-d photonic crystal design for the application of ultra-high pressure sensor',
+      research: 'This work proposes a GaAs/air one-dimensional photonic crystal with a central Al2O3 defect layer for optical pressure sensing from 5 to 15 GPa. Pressure-dependent photoelastic changes in GaAs produce a clear blue shift of the defect resonance from 1131.537 to 1099.857 nm, while combined transfer-matrix and finite-element optimization yields sensitivity of 3.3429 nm/GPa at 15 GPa. The optimized structure also reaches a quality factor near 1200 and an increasing signal-to-noise ratio, making it suitable for hydrostatic and other ultra-high-pressure environments.',
+      authors: ['Barnali Pal', 'Aloke Kumar Pathak', 'Bibhatsu Kuiri', 'Dipankar Biswas', 'Bubai Dutta', 'Santanu Mishra', 'Ardhendu Sekhar Patra']
     }
   ];
 
