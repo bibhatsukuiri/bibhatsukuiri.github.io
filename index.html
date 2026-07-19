@@ -72,12 +72,12 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 20px;
     }
 
     .nav-links a {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       text-decoration: none;
     }
@@ -306,6 +306,122 @@
       font-size: 0.9rem;
     }
 
+    .publication-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .publication-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .publication-card.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+      gap: 28px;
+      align-items: center;
+      border-left: 4px solid var(--navy);
+    }
+
+    .publication-label {
+      display: inline-flex;
+      width: fit-content;
+      margin-bottom: 10px;
+      padding: 4px 8px;
+      color: var(--blue);
+      background: var(--soft-blue);
+      border-radius: 2px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .publication-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.22rem;
+      line-height: 1.3;
+    }
+
+    .publication-card.featured h3 {
+      font-size: clamp(1.45rem, 2.5vw, 2rem);
+    }
+
+    .journal {
+      margin: 0 0 9px;
+      color: var(--navy);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .publication-summary {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .publication-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 16px;
+    }
+
+    .doi-button {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px 12px;
+      color: var(--navy);
+      background: var(--white);
+      border: 1px solid var(--navy);
+      border-radius: 3px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .doi-button:hover,
+    .doi-button:focus-visible {
+      color: var(--white);
+      background: var(--navy);
+    }
+
+    .publication-metric {
+      padding: 18px;
+      background: var(--navy-deep);
+      color: #d8e3eb;
+    }
+
+    .publication-metric strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--white);
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+
+    .publication-metric span {
+      display: block;
+      font-size: 0.88rem;
+    }
+
+    .section-action {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 16px;
+    }
+
     .experience-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -460,6 +576,7 @@
       .portrait { width: 225px; }
       .research-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .academic-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .publication-card.featured { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 720px) {
@@ -481,7 +598,8 @@
       .credential { border-right: 0; border-bottom: 1px solid rgba(255,255,255,0.14); }
       .credential:last-child { border-bottom: 0; }
       .section-top { align-items: start; flex-direction: column; gap: 8px; }
-      .experience-grid, .highlights-grid { grid-template-columns: 1fr; }
+      .publication-grid, .experience-grid, .highlights-grid { grid-template-columns: 1fr; }
+      .publication-card.featured { grid-column: auto; }
     }
 
     @media (max-width: 520px) {
@@ -490,6 +608,7 @@
       .research-grid, .academic-links { grid-template-columns: 1fr; }
       .contact-row, .footer-row { align-items: flex-start; flex-direction: column; }
       .section { padding: 34px 0; }
+      .section-action { justify-content: flex-start; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -504,6 +623,7 @@
       <a class="brand" href="#top">Bibhatsu Kuiri</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#research">Research</a>
+        <a href="#notable-research">Notable Research</a>
         <a href="#experience">Experience</a>
         <a href="#highlights">Highlights</a>
         <a href="#links">Academic Links</a>
@@ -596,7 +716,61 @@
       </div>
     </section>
 
-    <section id="experience" class="section" aria-labelledby="experience-title">
+    <section id="notable-research" class="section" aria-labelledby="notable-research-title">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <p class="eyebrow">Selected Publications</p>
+            <h2 id="notable-research-title">Notable Research</h2>
+          </div>
+          <p class="section-intro">Representative contributions spanning solid-state energy systems, terahertz photonics, structured-light transmission, and machine-learning-assisted fibre design.</p>
+        </div>
+
+        <div class="publication-grid">
+          <article class="publication-card featured">
+            <div>
+              <span class="publication-label">Featured Publication</span>
+              <h3>Direct correlation between void formation and lithium dendrite growth in solid-state electrolytes with interlayers</h3>
+              <p class="journal">Nature Materials, 2022</p>
+              <p class="publication-summary">This work established that interfacial void formation precedes lithium dendrite nucleation in garnet-based solid-state batteries. By combining electrochemical experiments, microscopy, and first-principles calculations, it showed how suitable metallic interlayers can suppress void growth and improve dendrite tolerance without impractically high stack pressure.</p>
+              <div class="publication-actions">
+                <a class="doi-button" href="https://doi.org/10.1038/s41563-022-01264-8" target="_blank" rel="noopener noreferrer">Open DOI</a>
+              </div>
+            </div>
+            <div class="publication-metric">
+              <strong>Nature Materials</strong>
+              <span>Interfacial engineering for safer and more durable solid-state lithium batteries.</span>
+            </div>
+          </article>
+
+          <article class="publication-card">
+            <span class="publication-label">Terahertz Photonics</span>
+            <h3>Ultra-low loss polymer-based photonic crystal fiber supporting 242 OAM modes with high bending tolerance for multimode THz communication</h3>
+            <p class="journal">Results in Physics, 2022</p>
+            <p class="publication-summary">A polymer ring-core photonic crystal fibre was designed to support 242 stable orbital-angular-momentum modes near 1.9 THz. The architecture combined very low confinement loss, high mode purity, broad THz operation, and strong bending tolerance for high-capacity multimode communication.</p>
+            <div class="publication-actions">
+              <a class="doi-button" href="https://doi.org/10.1016/j.rinp.2022.105465" target="_blank" rel="noopener noreferrer">Open DOI</a>
+            </div>
+          </article>
+
+          <article class="publication-card">
+            <span class="publication-label">AI-Assisted Photonics</span>
+            <h3>Deep learning prediction of novel hollow core photonic crystal fiber with tuned As2S3-LiNbO3 ring for multimode applications</h3>
+            <p class="journal">Optical Fiber Technology, 2024</p>
+            <p class="publication-summary">This study introduced a dual-ring hollow-core fibre supporting more than 200 OAM modes across the near-infrared region. A deep-learning model reproduced the numerically simulated fibre response within about 5 percent, demonstrating a practical route toward faster photonic design and performance prediction.</p>
+            <div class="publication-actions">
+              <a class="doi-button" href="https://doi.org/10.1016/j.yofte.2024.103998" target="_blank" rel="noopener noreferrer">Open DOI</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="section-action">
+          <a class="button button-primary" href="publications.html">Publications</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt" aria-labelledby="experience-title">
       <div class="container">
         <div class="section-top">
           <div>
@@ -631,7 +805,7 @@
       </div>
     </section>
 
-    <section id="highlights" class="section section-alt" aria-labelledby="highlights-title">
+    <section id="highlights" class="section" aria-labelledby="highlights-title">
       <div class="container">
         <div class="section-top">
           <div>
@@ -662,7 +836,7 @@
       </div>
     </section>
 
-    <section id="links" class="section" aria-labelledby="links-title">
+    <section id="links" class="section section-alt" aria-labelledby="links-title">
       <div class="container">
         <div class="section-top">
           <div>
