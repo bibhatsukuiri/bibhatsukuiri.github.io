@@ -29,6 +29,21 @@
       match: 'defect mode assisted 1-d photonic crystal design for the application of ultra-high pressure sensor',
       research: 'This work proposes a GaAs/air one-dimensional photonic crystal with a central Al2O3 defect layer for optical pressure sensing from 5 to 15 GPa. Pressure-dependent photoelastic changes in GaAs produce a clear blue shift of the defect resonance from 1131.537 to 1099.857 nm, while combined transfer-matrix and finite-element optimization yields sensitivity of 3.3429 nm/GPa at 15 GPa. The optimized structure also reaches a quality factor near 1200 and an increasing signal-to-noise ratio, making it suitable for hydrostatic and other ultra-high-pressure environments.',
       authors: ['Barnali Pal', 'Aloke Kumar Pathak', 'Bibhatsu Kuiri', 'Dipankar Biswas', 'Bubai Dutta', 'Santanu Mishra', 'Ardhendu Sekhar Patra']
+    },
+    {
+      match: 'biogenic synthesis of luminescent carbon nanoparticles as dual-functional photocatalysts',
+      research: 'This work uses Bixa orellana seed extract as a renewable carbon source, reducing agent and stabilizer to produce oxygen-functionalized fluorescent carbon nanoparticles through a single-step hydrothermal route. The approximately 5.7 nm particles show a 32% quantum yield and remove 96% of methylene blue and 90% of rhodamine B under UV irradiation, with optimal performance at 0.25 g/L catalyst loading and neutral pH while retaining above 90% efficiency after four cycles. The same material resolves level 1 to level 3 latent-fingerprint features, including ridge minutiae and sweat pores, demonstrating a rare dual function in wastewater remediation and forensic imaging.',
+      authors: ['Ankita Pal', 'Nayan Pandit', 'Rajkumar Mandal', 'Bibhatsu Kuiri', 'Biswanath Mukherjee']
+    },
+    {
+      match: 'end-point probability distributions of tethered polymers: theory and monte carlo simulations',
+      research: 'This study establishes a combined analytical and Monte Carlo framework for longitudinal and transverse end-point distributions of tethered polymers inside cylindrical confinement. Freely jointed, self-avoiding and worm-like chains are benchmarked against Fourier-series and image-method solutions, while a chain-length-adaptive SAW strategy combines kinetic growth, PERM and an off-lattice pivot algorithm to overcome severe sampling attrition. KL divergence, KS statistics and moment analysis identify short-chain, crossover and long-chain saturation regimes, and the resulting validated toolkit is implemented in an interactive Streamlit application for chromosome and nanoconfined-polymer analysis.',
+      authors: ['Rittwick Mondal', 'Bibhatsu Kuiri', 'Dipankar Biswas', 'Sonjoy Mondal', 'Soumyajyoti Kabi']
+    },
+    {
+      match: 'numerical investigation of a polymer-coated fiber spr platform',
+      research: 'This work develops a fibre-guided angular SPR platform using an Ag/Cr/Bi2O3-Al2O3-SiO2/polyimide coating stack for detecting near-unity refractive-index changes relevant to gaseous VOCs. Finite-element analysis shows strong field localisation near the polymer interface around 44°, while the resonance remains stable near 633 to 634 nm. Increasing the sensing-layer index from 1.001 to 1.010 shifts the resonance by 0.5432° and yields about 60.35 deg/RIU sensitivity with only modest linewidth broadening, confirming Ag as the preferred plasmonic film and Cr as the most effective auxiliary layer.',
+      authors: ['Amrita Deepika V G', 'Bibhatsu Kuiri', 'Rittwick Mondal', 'Soumyajyoti Kabi', 'Gagan Anand']
     }
   ];
 
