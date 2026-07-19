@@ -28,6 +28,21 @@ const reviewedPublicationExtras = [
     match: 'numerical evaluation of bidirectional high-speed data transmission over turbulence tolerable fso link',
     research: 'This work develops a 1.792 Tbps bidirectional free-space optical system by combining eight wavelength channels, two OAM modes and 112 Gbps DP-QPSK modulation in each transmission direction. A compact optical-frequency-comb generator supplies 44 nearly flat comb lines, while coherent detection and digital signal processing compensate phase, amplitude and waveform distortion caused by atmospheric turbulence. The study reports the first bidirectional evaluation of turbulence acting on DP-QPSK-carrying OAM beams, with power penalties restricted to 1.65 dB in clear weather and 4.91 dB under strong turbulence at a BER near 10⁻⁹.',
     authors: ['Bubai Dutta', 'Bibhatsu Kuiri', 'Rinki Atta', 'Nilanjana Sarkar', 'Ardhendu Sekhar Patra']
+  },
+  {
+    match: 'nano-engineered hfo2-au photonic sensor for ultra-sensitive refractive index detection',
+    research: 'This work introduces a D-shaped photonic-crystal-fibre refractive-index sensor that combines a high-index HfO₂ layer with a thin gold plasmonic coating to strengthen coupling between the guided core mode and the surface-plasmon mode. Finite-element optimisation of the air-hole geometry, core dimensions and coating thickness produces distinct responses for analyte refractive indices from 1.32 to 1.40 across 1.3 to 1.6 μm. The design achieves a peak relative sensitivity of 99.05%, confinement loss below 10⁻⁶ dB/m and single-mode operation, while comparison with a structure lacking HfO₂ confirms the role of the dielectric layer in strengthening the plasmonic response.',
+    authors: ['Bibhatsu Kuiri', 'Aloke Kumar Pathak', 'Amlan Das', 'Binoy Das', 'Vigneswaran Dhasarathan', 'Ardhendu Sekhar Patra']
+  },
+  {
+    match: 'activated carbon-supported lanio3 perovskite nanocomposite supercapacitor electrode material',
+    research: 'This study develops a LaNiO₃@activated-carbon nanocomposite electrode that combines the pseudocapacitive redox activity of LaNiO₃ with the electrical-double-layer storage, porosity and conductivity of activated carbon. The composite reaches 260.45 F/g at 0.5 A/g, an energy density of 36.17 Wh/kg and 80.78% capacitance retention after 10,000 cycles, substantially outperforming the pure LaNiO₃ electrode. Electrochemical modelling, charge-contribution analysis and density-functional calculations further connect the improved performance to lower charge-transfer resistance, enhanced ion diffusion and the active Ni 3d and O 2p electronic states.',
+    authors: ['Buddhodev Chowdhury', 'Amrit Sahis', 'Bibhatsu Kuiri', 'Ardhendu Sekhar Patra', 'Debasis Dhak', 'Sudipta Pal']
+  },
+  {
+    match: 'role of plasmonic layer with sno2 thin film to improve uv photoluminescence and photoresponse',
+    research: 'This experimental study integrates a non-noble aluminium plasmonic film with SnO₂ in a SnO₂/Al/Si heterostructure to enhance ultraviolet emission and detection. Excitation near the approximately 270 nm aluminium surface-plasmon resonance drives interfacial electron transfer into SnO₂, producing about fivefold stronger UV photoluminescence than bare SnO₂. A proof-of-concept photodetector consequently delivers nearly three times higher responsivity and an approximately tenfold improvement in on-off ratio under 275 nm illumination, demonstrating that one plasmonic layer can simultaneously improve optical emission and photoresponse.',
+    authors: ['Subhamay Pramanik', 'Rajesh Mandal', 'Bibhatsu Kuiri', 'Sudipta Kumar Sarkar', 'Sovanlal Mondal', 'Ardhendu Sekhar Patra', 'Rajib Nath', 'Probodh Kumar Kuiri']
   }
 ];
 
