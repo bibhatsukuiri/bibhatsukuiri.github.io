@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Journal publications of Bibhatsu Kuiri in photonics, optical sensing, materials, energy systems and scientific computing.">
+<meta name="theme-color" content="#0d263d">
+<title>Publications | Bibhatsu Kuiri</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/publications.css">
+</head>
+<body>
+<header class="site-header"><div class="container nav"><a class="brand" href="index.html">Bibhatsu Kuiri</a><a class="profile-link" href="index.html">Profile</a></div></header>
+<main>
+<section class="page-head"><div class="container"><h1>Publications</h1><p class="intro">A concise record of journal publications. Use the small disclosure icon beside a paper to view its research focus, authorship role and DOI link.</p><p class="record-line">53 journal articles · 2020 to 2026</p></div></section>
+<section class="container" aria-label="Publication controls and list">
+<div class="controls">
+<input class="control search" id="search" type="search" placeholder="Search title or journal" aria-label="Search publications">
+<select class="control" id="sort" aria-label="Sort publications"><option value="year-desc">Newest first</option><option value="year-asc">Oldest first</option><option value="if-desc">Impact factor: high to low</option><option value="if-asc">Impact factor: low to high</option></select>
+<select class="control" id="year" aria-label="Filter by publication year"><option value="all">All years</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option></select>
+</div>
+<p class="result-count" id="result-count">Showing 53 publications</p>
+<div class="publication-list" id="publication-list"></div>
+<p class="empty" id="empty">No publications match the selected filters.</p>
+</section>
+</main>
+<footer><div class="container footer-row"><span>© 2026 Bibhatsu Kuiri</span><span>Publication Record</span></div></footer>
+<script src="assets/publications-data.js"></script>
+<script src="assets/publications.js"></script>
+</body>
+</html>
