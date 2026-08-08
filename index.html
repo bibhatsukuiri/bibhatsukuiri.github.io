@@ -27,17 +27,18 @@
     @media(max-width:680px){.container{width:min(calc(100% - 28px),var(--max))}.hero-grid{grid-template-columns:minmax(0,1fr) 122px;gap:8px;align-items:end;padding:19px 0 12px}.portrait-wrap{justify-content:flex-end;align-self:end;max-height:none;overflow:visible}.portrait{width:122px;max-height:190px}.position{font-size:.76rem;padding:3px 7px}.role{font-size:.98rem}.summary{font-size:.88rem;line-height:1.45}.actions{gap:6px}.button{padding:5px 9px;font-size:.78rem}.metrics-line{line-height:1.9}.metric-separator{margin:0 5px}.expertise-line{line-height:1.7}.expertise-separator{margin:0 5px}.section{padding:20px 0}.paper-row{grid-template-columns:1fr;gap:2px;padding:8px 0}.paper-meta{text-align:left}.experience-row{line-height:1.55}.highlights-list{columns:1}.section-action{justify-content:flex-start}.footer-row{flex-direction:column}}
     @media(max-width:420px){.hero-grid{grid-template-columns:minmax(0,1fr) 96px;gap:5px}.portrait{width:96px;max-height:158px}h1{font-size:2.2rem}.role{font-size:.9rem}.summary{font-size:.82rem}.position{font-size:.69rem}.button{font-size:.72rem;padding:4px 7px}.metrics-line strong{font-size:1.18rem}.metric-separator{display:none}.metrics-line span:not(.metric-separator){display:block}.expertise-separator{display:none}.expertise-line span{display:block;margin-bottom:3px}.profile-links{display:block}.profile-links a{display:block;padding:5px 0}}
   </style>
+  <link rel="stylesheet" href="assets/site-nav.css?v=20260809-1">
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#top">Bibhatsu Kuiri</a>
-      <nav class="desktop-nav" aria-label="Primary navigation"><a href="#research">Research</a><a href="publications.html">Publications</a><a href="expertise.html">Expertise</a><a href="outreach.html">Outreach</a></nav>
+      <a class="brand" href="index.html">Bibhatsu Kuiri</a>
+      <nav class="desktop-nav" aria-label="Primary navigation"><a href="index.html" aria-current="page">Profile</a><a href="publications.html">Publications</a><a href="expertise.html">Expertise</a><a href="outreach.html">Outreach</a></nav>
       <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span></button>
     </div>
   </header>
   <div class="menu-overlay" aria-hidden="true"></div>
-  <nav class="mobile-menu" aria-label="Mobile navigation"><a href="#research">Research</a><a href="publications.html">Publications</a><a href="expertise.html">Expertise</a><a href="outreach.html">Outreach</a></nav>
+  <nav class="mobile-menu" aria-label="Mobile navigation"><a href="index.html" aria-current="page">Profile</a><a href="publications.html">Publications</a><a href="expertise.html">Expertise</a><a href="outreach.html">Outreach</a></nav>
 
   <main id="top">
     <section class="hero">
@@ -87,10 +88,6 @@
   </main>
 
   <footer><div class="container footer-row"><span>© 2026 Bibhatsu Kuiri</span><span>Research Profile</span></div></footer>
-  <script>
-    const toggle=document.querySelector('.menu-toggle'),overlay=document.querySelector('.menu-overlay'),menu=document.querySelector('.mobile-menu');
-    function setMenu(open){document.body.classList.toggle('menu-open',open);toggle.setAttribute('aria-expanded',String(open))}
-    toggle.addEventListener('click',()=>setMenu(!document.body.classList.contains('menu-open')));overlay.addEventListener('click',()=>setMenu(false));menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
-  </script>
+  <script src="assets/site-nav.js?v=20260809-1"></script>
 </body>
 </html>
