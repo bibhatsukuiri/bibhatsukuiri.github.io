@@ -10,21 +10,30 @@
 <title>Expertise | Bibhatsu Kuiri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/expertise.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/expertise.css?v=20260809-1">
+<link rel="stylesheet" href="assets/site-nav.css?v=20260809-1">
 </head>
 <body>
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">Bibhatsu Kuiri</a>
-    <nav class="header-links" aria-label="Primary navigation">
+    <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="index.html">Profile</a>
       <a href="publications.html">Publications</a>
       <a href="expertise.html" aria-current="page">Expertise</a>
       <a href="outreach.html">Outreach</a>
     </nav>
+    <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span></button>
   </div>
 </header>
+<div class="menu-overlay" aria-hidden="true"></div>
+<nav class="mobile-menu" aria-label="Mobile navigation">
+  <a href="index.html">Profile</a>
+  <a href="publications.html">Publications</a>
+  <a href="expertise.html" aria-current="page">Expertise</a>
+  <a href="outreach.html">Outreach</a>
+</nav>
 
 <main id="top">
   <section class="page-head">
@@ -158,5 +167,6 @@
 </main>
 
 <footer><div class="container footer-row"><span>© 2026 Bibhatsu Kuiri</span><span>Technical Expertise</span></div></footer>
+<script src="assets/site-nav.js?v=20260809-1"></script>
 </body>
 </html>
