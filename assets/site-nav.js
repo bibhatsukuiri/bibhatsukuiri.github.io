@@ -17,3 +17,8 @@
     if (event.key === 'Escape') setMenu(false);
   });
 })();
+
+(() => {
+  const publicationMetric = document.querySelector('.metrics-line span strong');
+  if (publicationMetric) publicationMetric.textContent = '56+';
+})();
