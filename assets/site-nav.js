@@ -20,5 +20,15 @@
 
 (() => {
   const publicationMetric = document.querySelector('.metrics-line span strong');
-  if (publicationMetric) publicationMetric.textContent = '56+';
+  if (publicationMetric) publicationMetric.textContent = '58+';
+})();
+
+(() => {
+  const heading = [...document.querySelectorAll('.section-heading h2')]
+    .find((item) => item.textContent.trim() === 'Notable Research');
+  const firstPaper = heading?.closest('.section')?.querySelector('.paper-list .paper-row');
+  if (!firstPaper) return;
+
+  firstPaper.classList.remove('landmark');
+  firstPaper.innerHTML = '<div><div class="paper-kicker">High-Resolution SPR Fuel Sensing</div><h3>Resonance-mediated SPR sensor for high-resolution detection of ethanol content in petrol near E20</h3><p>A thickness-optimized BK7/Au/LiB3O5/PbTe SPR platform resolves small ethanol-content deviations around E20, reaching sensitivity up to 114.88&deg;/RIU with Monte Carlo and fabrication-tolerance validation.</p></div><div class="paper-meta"><strong>The European Physical Journal Plus</strong><span>2026</span><a class="paper-link" href="https://doi.org/10.1140/epjp/s13360-026-08228-w" target="_blank" rel="noopener noreferrer">View Paper</a></div>';
 })();
