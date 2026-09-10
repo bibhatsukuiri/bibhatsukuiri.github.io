@@ -37,6 +37,22 @@
   const videos = [...document.querySelectorAll('video[data-video-base][data-video-parts]')];
 
   for (const video of videos) {
+    const directVideo = video.dataset.directVideo;
+
+    if (directVideo) {
+      try {
+        const directResponse = await fetch(directVideo, { method: 'HEAD', cache: 'no-store' });
+        if (directResponse.ok) {
+          video.src = directVideo;
+          video.load();
+          video.play().catch(() => {});
+          continue;
+        }
+      } catch (error) {
+        // Fall back to the legacy embedded copy below.
+      }
+    }
+
     try {
       const base = video.dataset.videoBase;
       const count = Number(video.dataset.videoParts);
