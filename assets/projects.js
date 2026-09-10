@@ -2,6 +2,12 @@
   const categoryTabs = [...document.querySelectorAll('[data-category-target]')];
   const projectTabs = [...document.querySelectorAll('[data-project-target]')];
 
+  const developmentTab = document.querySelector('[data-category-target="category-software"]');
+  if (developmentTab) developmentTab.textContent = 'Development';
+
+  const developmentProjects = document.querySelector('.category-panel#category-software .project-tabs');
+  if (developmentProjects) developmentProjects.setAttribute('aria-label', 'Development projects');
+
   const activate = (tabs, targetAttribute, targetId) => {
     tabs.forEach((tab) => {
       const active = tab.getAttribute(targetAttribute) === targetId;
