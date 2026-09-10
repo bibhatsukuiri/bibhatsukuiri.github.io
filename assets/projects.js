@@ -40,43 +40,83 @@
 })();
 
 (() => {
+  const makeVideo = (shell, src) => new Promise((resolve, reject) => {
+    const video = document.createElement('video');
+    video.muted = true;
+    video.loop = true;
+    video.autoplay = true;
+    video.playsInline = true;
+    video.preload = 'auto';
+    video.setAttribute('aria-label', shell.dataset.videoLabel || 'Project video');
+
+    const cleanup = () => {
+      video.removeEventListener('canplay', ready);
+      video.removeEventListener('error', failed);
+    };
+    const ready = () => { cleanup(); resolve(video); };
+    const failed = () => { cleanup(); video.remove(); reject(new Error('Video source failed')); };
+
+    video.addEventListener('canplay', ready, { once: true });
+    video.addEventListener('error', failed, { once: true });
+    video.src = src;
+    shell.appendChild(video);
+    video.load();
+  });
+
+  const loadLegacyFallback = async (src) => {
+    let encoded = '';
+    for (let index = 1; index <= 3; index += 1) {
+      const part = String(index).padStart(2, '0');
+      const response = await fetch(`${src}.part${part}.b64`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`Fallback part ${part} unavailable`);
+      encoded += (await response.text()).trim();
+    }
+
+    const binary = atob(encoded.replace(/\s+/g, ''));
+    const bytes = new Uint8Array(binary.length);
+    for (let index = 0; index < binary.length; index += 1) {
+      bytes[index] = binary.charCodeAt(index);
+    }
+    return URL.createObjectURL(new Blob([bytes], { type: 'video/webm' }));
+  };
+
   document.querySelectorAll('[data-video-player]').forEach((shell) => {
     const button = shell.querySelector('[data-load-video]');
     if (!button) return;
 
-    button.addEventListener('click', () => {
+    button.addEventListener('click', async () => {
       const src = shell.dataset.videoSrc;
-      if (!src || shell.classList.contains('is-loaded')) return;
+      if (!src || shell.classList.contains('is-loaded') || shell.classList.contains('is-loading')) return;
 
       shell.classList.add('is-loading');
       button.textContent = 'Loading…';
       button.disabled = true;
 
-      const video = document.createElement('video');
-      video.muted = true;
-      video.loop = true;
-      video.autoplay = true;
-      video.playsInline = true;
-      video.preload = 'auto';
-      video.setAttribute('aria-label', shell.dataset.videoLabel || 'Project video');
+      let objectUrl = null;
+      try {
+        let video;
+        try {
+          video = await makeVideo(shell, src);
+        } catch (directError) {
+          objectUrl = await loadLegacyFallback(src);
+          video = await makeVideo(shell, objectUrl);
+        }
 
-      video.addEventListener('canplay', () => {
         shell.querySelector('.video-poster')?.remove();
         button.remove();
         shell.classList.remove('is-loading');
         shell.classList.add('is-loaded');
         video.play().catch(() => {});
-      }, { once: true });
 
-      video.addEventListener('error', () => {
+        if (objectUrl) {
+          window.addEventListener('pagehide', () => URL.revokeObjectURL(objectUrl), { once: true });
+        }
+      } catch (error) {
+        console.error('Project video failed to load.', error);
         shell.classList.remove('is-loading');
         button.disabled = false;
-        button.textContent = 'Load video';
-      }, { once: true });
-
-      video.src = src;
-      shell.appendChild(video);
-      video.load();
+        button.textContent = 'Video unavailable';
+      }
     });
   });
 })();
