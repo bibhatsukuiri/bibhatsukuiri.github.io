@@ -33,52 +33,44 @@
   });
 })();
 
-(async () => {
-  const videos = [...document.querySelectorAll('video[data-video-base][data-video-parts]')];
+(() => {
+  document.querySelectorAll('[data-video-player]').forEach((shell) => {
+    const button = shell.querySelector('[data-load-video]');
+    if (!button) return;
 
-  for (const video of videos) {
-    const directVideo = video.dataset.directVideo;
+    button.addEventListener('click', () => {
+      const src = shell.dataset.videoSrc;
+      if (!src || shell.classList.contains('is-loaded')) return;
 
-    if (directVideo) {
-      try {
-        const directResponse = await fetch(directVideo, { method: 'HEAD', cache: 'no-store' });
-        if (directResponse.ok) {
-          video.src = directVideo;
-          video.load();
-          video.play().catch(() => {});
-          continue;
-        }
-      } catch (error) {
-        // Fall back to the legacy embedded copy below.
-      }
-    }
+      shell.classList.add('is-loading');
+      button.textContent = 'Loading…';
+      button.disabled = true;
 
-    try {
-      const base = video.dataset.videoBase;
-      const count = Number(video.dataset.videoParts);
-      let encoded = '';
+      const video = document.createElement('video');
+      video.muted = true;
+      video.loop = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.preload = 'auto';
+      video.setAttribute('aria-label', shell.dataset.videoLabel || 'Project video');
 
-      for (let index = 1; index <= count; index += 1) {
-        const part = String(index).padStart(2, '0');
-        const response = await fetch(`${base}.part${part}.b64`);
-        if (!response.ok) throw new Error(`Unable to load video part ${part}`);
-        encoded += (await response.text()).trim();
-      }
+      video.addEventListener('canplay', () => {
+        shell.querySelector('.video-poster')?.remove();
+        button.remove();
+        shell.classList.remove('is-loading');
+        shell.classList.add('is-loaded');
+        video.play().catch(() => {});
+      }, { once: true });
 
-      const binary = atob(encoded.replace(/\s+/g, ''));
-      const bytes = new Uint8Array(binary.length);
-      for (let index = 0; index < binary.length; index += 1) {
-        bytes[index] = binary.charCodeAt(index);
-      }
+      video.addEventListener('error', () => {
+        shell.classList.remove('is-loading');
+        button.disabled = false;
+        button.textContent = 'Load video';
+      }, { once: true });
 
-      const objectUrl = URL.createObjectURL(new Blob([bytes], { type: 'video/webm' }));
-      video.src = objectUrl;
+      video.src = src;
+      shell.appendChild(video);
       video.load();
-      video.play().catch(() => {});
-      window.addEventListener('pagehide', () => URL.revokeObjectURL(objectUrl), { once: true });
-    } catch (error) {
-      console.error('Project video failed to load.', error);
-      video.closest('.video-shell')?.classList.add('video-error');
-    }
-  }
+    });
+  });
 })();
