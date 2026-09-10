@@ -1,4 +1,20 @@
 (() => {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.desktop-nav, .header-links, .mobile-menu').forEach((nav) => {
+    if (nav.querySelector('a[href="projects.html"]')) return;
+
+    const link = document.createElement('a');
+    link.href = 'projects.html';
+    link.textContent = 'Projects';
+    if (currentPage === 'projects.html') link.setAttribute('aria-current', 'page');
+
+    const outreach = nav.querySelector('a[href="outreach.html"]');
+    if (outreach) nav.insertBefore(link, outreach);
+    else nav.appendChild(link);
+  });
+})();
+
+(() => {
   const toggle = document.querySelector('.menu-toggle');
   const overlay = document.querySelector('.menu-overlay');
   const menu = document.querySelector('.mobile-menu');

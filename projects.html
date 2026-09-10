@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selected software, computational modelling, photonics, multiphysics and scientific computing projects by Bibhatsu Kuiri.">
+  <meta name="author" content="Bibhatsu Kuiri">
+  <meta name="theme-color" content="#0d263d">
+  <meta name="color-scheme" content="light">
+  <title>Projects | Bibhatsu Kuiri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site-nav.css?v=20260910-1">
+  <link rel="stylesheet" href="assets/projects.css?v=20260910-1">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">Bibhatsu Kuiri</a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="index.html">Profile</a>
+        <a href="publications.html">Publications</a>
+        <a href="expertise.html">Expertise</a>
+        <a href="projects.html" aria-current="page">Projects</a>
+        <a href="outreach.html">Outreach</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+  <div class="menu-overlay" aria-hidden="true"></div>
+  <nav class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html">Profile</a>
+    <a href="publications.html">Publications</a>
+    <a href="expertise.html">Expertise</a>
+    <a href="projects.html" aria-current="page">Projects</a>
+    <a href="outreach.html">Outreach</a>
+  </nav>
+
+  <main>
+    <section class="projects-hero">
+      <div class="container">
+        <p class="eyebrow">Technical Portfolio</p>
+        <h1>Projects</h1>
+        <p class="hero-copy">Selected scientific software, computational modelling and simulation-driven projects, presented through concise technical notes and visual demonstrations.</p>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <div class="container">
+        <div class="category-tabs" role="tablist" aria-label="Project categories">
+          <button class="category-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="category-software" data-category-target="category-software">Software Development</button>
+        </div>
+
+        <section class="category-panel" id="category-software" role="tabpanel">
+          <div class="category-heading">
+            <div>
+              <p class="category-kicker">Software Development</p>
+              <h2>Scientific and Research Software</h2>
+            </div>
+            <p>Computational tools and visual applications developed for scientific modelling, simulation and research workflows.</p>
+          </div>
+
+          <div class="project-tabs" role="tablist" aria-label="Software development projects">
+            <button class="project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="project-purkinje" data-project-target="project-purkinje">Human Heart Purkinje Network</button>
+          </div>
+
+          <article class="project-panel is-active" id="project-purkinje" role="tabpanel">
+            <div class="project-copy">
+              <p class="project-kicker">Computational Cardiac Visualization</p>
+              <h3>Human Heart Purkinje Network</h3>
+              <p>A computational visualization of the human cardiac Purkinje network mapped within a three-dimensional heart geometry. The project demonstrates software-based construction and inspection of a branching conduction network, with the generated pathways shown directly within the anatomical model.</p>
+              <p>The visual workflow provides a clear way to inspect network distribution, branching structure and spatial placement, making the model useful as a foundation for more advanced cardiac conduction and simulation studies.</p>
+              <div class="project-tags" aria-label="Project topics">
+                <span>Scientific Software</span>
+                <span>3D Visualization</span>
+                <span>Cardiac Modelling</span>
+                <span>Computational Geometry</span>
+              </div>
+            </div>
+
+            <figure class="project-media">
+              <div class="video-shell">
+                <video autoplay muted loop playsinline preload="none"
+                       data-video-base="assets/projects/software-development/human-heart-purkinje-network.webm"
+                       data-video-parts="3"
+                       aria-label="Looping demonstration of the human heart Purkinje network project">
+                  Your browser does not support WebM video playback.
+                </video>
+              </div>
+              <figcaption>Looping project demonstration showing the branching Purkinje network within the three-dimensional heart model.</figcaption>
+            </figure>
+          </article>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row"><span>© 2026 Bibhatsu Kuiri</span><span>Technical Projects</span></div>
+  </footer>
+
+  <script src="assets/site-nav.js?v=20260910-1"></script>
+  <script src="assets/projects.js?v=20260910-1"></script>
+</body>
+</html>
