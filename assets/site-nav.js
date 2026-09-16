@@ -35,8 +35,11 @@
 })();
 
 (() => {
-  const publicationMetric = document.querySelector('.metrics-line span strong');
+  const metrics = document.querySelectorAll('.metrics-line span strong');
+  const publicationMetric = metrics[0];
+  const citationMetric = metrics[1];
   if (publicationMetric) publicationMetric.textContent = '58+';
+  if (citationMetric) citationMetric.textContent = '910+';
 })();
 
 (() => {
