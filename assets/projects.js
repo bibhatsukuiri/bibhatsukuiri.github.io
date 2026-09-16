@@ -37,15 +37,17 @@
   const PURKINJE_ARCHIVE_COMMIT = '068e343ebda62f66f53f17566af08ef506eafb26';
   const PURKINJE_ARCHIVE_BASE = `https://raw.githubusercontent.com/bibhatsukuiri/bibhatsukuiri.github.io/${PURKINJE_ARCHIVE_COMMIT}/`;
 
-  const archivedVideoBlob = async (src) => {
+  const archivedVideoBlob = async (src, onProgress) => {
     let encoded = '';
+    const partCount = 3;
 
-    for (let index = 1; index <= 3; index += 1) {
+    for (let index = 1; index <= partCount; index += 1) {
       const part = String(index).padStart(2, '0');
       const url = `${PURKINJE_ARCHIVE_BASE}${src}.part${part}.b64`;
       const response = await fetch(url, { cache: 'force-cache' });
       if (!response.ok) throw new Error(`Unable to load archived video part ${part}`);
       encoded += (await response.text()).trim();
+      onProgress?.(Math.round((index / partCount) * 90));
     }
 
     const binary = atob(encoded.replace(/\s+/g, ''));
@@ -54,21 +56,46 @@
       bytes[index] = binary.charCodeAt(index);
     }
 
+    onProgress?.(100);
     return new Blob([bytes], { type: 'video/webm' });
   };
 
-  const resolveVideoSource = async (src) => {
-    try {
-      const response = await fetch(src, { cache: 'no-cache' });
-      if (response.ok) {
-        const blob = await response.blob();
-        if (blob.type.startsWith('video/') || blob.size > 0) return blob;
-      }
-    } catch (_) {
-      // Fall through to the archived project asset.
+  const fetchVideoWithProgress = async (src, onProgress) => {
+    const response = await fetch(src, { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`Video request failed with ${response.status}`);
+
+    const contentType = response.headers.get('content-type') || 'video/webm';
+    const total = Number(response.headers.get('content-length')) || 0;
+
+    if (!response.body || !total) {
+      onProgress?.(null);
+      const blob = await response.blob();
+      onProgress?.(100);
+      return blob;
     }
 
-    return archivedVideoBlob(src);
+    const reader = response.body.getReader();
+    const chunks = [];
+    let received = 0;
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      chunks.push(value);
+      received += value.byteLength;
+      onProgress?.(Math.min(99, Math.round((received / total) * 100)));
+    }
+
+    onProgress?.(100);
+    return new Blob(chunks, { type: contentType });
+  };
+
+  const resolveVideoSource = async (src, onProgress) => {
+    try {
+      return await fetchVideoWithProgress(src, onProgress);
+    } catch (_) {
+      return archivedVideoBlob(src, onProgress);
+    }
   };
 
   document.querySelectorAll('[data-video-player]').forEach((shell) => {
@@ -80,13 +107,19 @@
       if (!src || shell.classList.contains('is-loaded') || shell.classList.contains('is-loading')) return;
 
       shell.classList.add('is-loading');
-      button.textContent = 'Loading…';
+      button.textContent = 'Loading 0%';
       button.disabled = true;
+      button.setAttribute('aria-live', 'polite');
 
       let objectUrl;
 
+      const showProgress = (percent) => {
+        button.textContent = Number.isFinite(percent) ? `Loading ${percent}%` : 'Loading…';
+      };
+
       try {
-        const blob = await resolveVideoSource(src);
+        const blob = await resolveVideoSource(src, showProgress);
+        button.textContent = 'Preparing video…';
         objectUrl = URL.createObjectURL(blob);
 
         const video = document.createElement('video');
