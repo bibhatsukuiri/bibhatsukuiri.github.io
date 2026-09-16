@@ -60,12 +60,25 @@
     .find((item) => item.textContent.trim().startsWith('Peer review:'));
   if (!peerReview) return;
 
-  if (!highlights.querySelector('.editorial-highlight')) {
+  const editorialRoles = [
+    {
+      key: 'frontiers-photonics',
+      html: '<strong>Associate Editor:</strong> <em>Frontiers in Photonics</em> (Editorial Board, Frontiers).'
+    },
+    {
+      key: 'scientific-reports',
+      html: '<strong>Editorial Board Member:</strong> <em>Scientific Reports</em> (Nature Portfolio, Springer Nature).'
+    }
+  ];
+
+  editorialRoles.forEach(({ key, html }) => {
+    if (highlights.querySelector(`[data-editorial-role="${key}"]`)) return;
     const editorial = document.createElement('li');
     editorial.className = 'editorial-highlight';
-    editorial.innerHTML = '<strong>Editorial Board Member:</strong> <em>Scientific Reports</em> (Nature Portfolio, Springer Nature).';
+    editorial.dataset.editorialRole = key;
+    editorial.innerHTML = html;
     highlights.insertBefore(editorial, peerReview);
-  }
+  });
 
   peerReview.innerHTML = '<strong>Peer review:</strong> Reviewer for Optics Communications, Optical Fiber Technology, Results in Physics and other journals.';
 
