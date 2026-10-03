@@ -38,7 +38,7 @@
   const metrics = document.querySelectorAll('.metrics-line span strong');
   const publicationMetric = metrics[0];
   const citationMetric = metrics[1];
-  if (publicationMetric) publicationMetric.textContent = '58+';
+  if (publicationMetric) publicationMetric.textContent = '59+';
   if (citationMetric) citationMetric.textContent = '930+';
 })();
 
