@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/site-nav.css?v=20260910-1">
-  <link rel="stylesheet" href="assets/projects.css?v=20260910-5">
+  <link rel="stylesheet" href="assets/projects.css?v=20261008-1">
 </head>
 <body>
   <header class="site-header">
@@ -53,10 +53,28 @@
 
         <section class="category-panel" id="category-software" role="tabpanel">
           <div class="project-tabs" role="tablist" aria-label="Development projects">
-            <button class="project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="project-purkinje" data-project-target="project-purkinje">Human Heart Purkinje Network</button>
+            <button class="project-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="project-microcavity" data-project-target="project-microcavity">Microcavity Field Confinement</button>
+            <button class="project-tab" type="button" role="tab" aria-selected="false" aria-controls="project-purkinje" data-project-target="project-purkinje">Human Heart Purkinje Network</button>
           </div>
 
-          <article class="project-panel is-active" id="project-purkinje" role="tabpanel">
+          <article class="project-panel is-active" id="project-microcavity" role="tabpanel">
+            <div class="project-copy">
+              <h3>Field Confinement in a Microcavity</h3>
+              <p>A microcavity simulation showing optical field confinement at 633 nm. The animation follows the field distribution through a phase cycle, revealing strong localization within the cavity and a weaker field in the surrounding regions.</p>
+            </div>
+
+            <figure class="project-media">
+              <div class="video-shell video-shell--portrait"
+                   data-video-player
+                   data-video-src="assets/projects/software-development/microcavity-field-confinement.mp4"
+                   data-video-label="Phase-resolved animation of optical field confinement in a microcavity at 633 nm">
+                <img class="video-poster" alt="Simulated microcavity field distribution at 633 nm, showing strong confinement near the cavity centre" src="assets/projects/software-development/microcavity-field-confinement.webp" width="500" height="700">
+                <button class="video-load" type="button" data-load-video>Load video</button>
+              </div>
+            </figure>
+          </article>
+
+          <article class="project-panel" id="project-purkinje" role="tabpanel">
             <div class="project-copy">
               <h3>Human Heart Purkinje Network</h3>
               <p>A computational visualization of the human cardiac Purkinje network within a three-dimensional heart geometry, showing the generated branching conduction pathways and their spatial distribution inside the anatomical model.</p>

@@ -6,3 +6,5 @@
 @media(max-width:680px){.container{width:min(calc(100% - 28px),var(--max))}.projects-hero{padding:18px 0 14px}.projects-section{padding:13px 0 24px}.category-tab,.project-tab{padding:7px 10px;font-size:.77rem}.project-panel{padding:14px}.video-shell{min-height:210px}.footer-row{flex-direction:column;gap:2px}}
 @media(max-width:420px){.projects-hero h1{font-size:2rem}.project-copy h3{font-size:1.4rem}.video-shell{min-height:180px}}
 @media(prefers-reduced-motion:reduce){.category-tab,.project-tab{transition:none}}
+
+.video-shell--portrait{aspect-ratio:5/7;min-height:0;max-width:343px;margin-inline:auto;background:#fff}.video-shell--portrait .video-poster,.video-shell--portrait video{background:#fff}
