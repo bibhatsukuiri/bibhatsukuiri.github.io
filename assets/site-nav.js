@@ -35,14 +35,6 @@
 })();
 
 (() => {
-  const metrics = document.querySelectorAll('.metrics-line span strong');
-  const publicationMetric = metrics[0];
-  const citationMetric = metrics[1];
-  if (publicationMetric) publicationMetric.textContent = '59+';
-  if (citationMetric) citationMetric.textContent = '930+';
-})();
-
-(() => {
   const heading = [...document.querySelectorAll('.section-heading h2')]
     .find((item) => item.textContent.trim() === 'Notable Research');
   const firstPaper = heading?.closest('.section')?.querySelector('.paper-list .paper-row');
